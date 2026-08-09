@@ -1,0 +1,355 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import '../../styles/global.css';
+
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Comparatif des meilleurs gels energetiques 2026",
+  "description": "Top 10 des meilleurs gels energetiques pour le marathon, trail et course a pied. Tests independants, composition et prix compares.",
+  "author": { "@type": "Organization", "name": "Running et Trail" },
+  "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09"
+});
+
+const products = [
+  {
+    rank: 1,
+    brand: "NutriForce",
+    name: "Gel Endurance Elite",
+    image: "/images/products/nutriforce-gel.webp",
+    score: 9.4,
+    price: "27,99 €",
+    priceDose: "2,33 €",
+    keySpecLabel: "Glucides",
+    keySpec: "31 g",
+    bullets: [
+      "<strong>31 g de glucides</strong> (maltodextrine + fructose ratio 2:1)",
+      "Enrichi en <strong>electrolytes</strong> (sodium, potassium, magnesium)",
+      "Ultra-digeste, texture fluide, sans gluten ni lactose",
+      "Certifie HACCP et AFNOR 17444",
+      "<strong>4,9/5</strong> sur 101 avis verifies"
+    ],
+    testUrl: "/tests/nutriforce-gel-endurance-elite",
+    productUrl: "https://nutriforce.fr/product/gel-endurance-course-a-pied/",
+    featured: true
+  },
+  {
+    rank: 2,
+    brand: "Maurten",
+    name: "Gel 100",
+    image: "/images/products/maurten-gel100.webp",
+    score: 9.1,
+    price: "39,00 €",
+    priceDose: "3,25 €",
+    keySpecLabel: "Glucides",
+    keySpec: "25 g",
+    bullets: [
+      "<strong>25 g de glucides</strong> par gel (40 g)",
+      "Technologie hydrogel brevetee pour <strong>zero troubles digestifs</strong>",
+      "Gout neutre, sans aromes artificiels",
+      "Utilise par les marathoniens d'elite (Kipchoge)"
+    ],
+    testUrl: "/tests/maurten-gel-100",
+    productUrl: "https://www.maurten.com/fr/products/gel-100",
+    featured: false
+  },
+  {
+    rank: 3,
+    brand: "Science in Sport",
+    name: "GO Isotonic Energy Gel",
+    image: "/images/products/sis-go-gel.webp",
+    score: 8.8,
+    price: "30,00 €",
+    priceDose: "2,00 €",
+    keySpecLabel: "Glucides",
+    keySpec: "22 g",
+    bullets: [
+      "<strong>22 g de glucides</strong> par gel isotonique",
+      "Formule isotonique : <strong>pas besoin d'eau</strong>",
+      "Large gamme de saveurs (7+ parfums)",
+      "Certifie Informed Sport (antidopage)"
+    ],
+    testUrl: "/tests/sis-go-isotonic-gel",
+    productUrl: "https://www.scienceinsport.com/",
+    featured: false
+  },
+  {
+    rank: 4,
+    brand: "Overstim's",
+    name: "Gel Antioxydant Liquide",
+    image: "/images/products/overstims-gel.webp",
+    score: 8.6,
+    price: "33,60 €",
+    priceDose: "1,40 €",
+    keySpecLabel: "Glucides",
+    keySpec: "19 g",
+    bullets: [
+      "<strong>19 g de glucides</strong> + antioxydants (vitamine E)",
+      "Texture tres liquide, facile a avaler",
+      "Fabrication francaise, marque historique",
+      "Existe en version cafeinee (50 mg)"
+    ],
+    testUrl: "/tests/overstims-gel-antioxydant",
+    productUrl: "https://www.overstims.com/",
+    featured: false
+  },
+  {
+    rank: 5,
+    brand: "GU Energy",
+    name: "Roctane Ultra Endurance",
+    image: "/images/products/gu-roctane.webp",
+    score: 8.5,
+    price: "36,00 €",
+    priceDose: "1,50 €",
+    keySpecLabel: "Glucides",
+    keySpec: "21 g",
+    bullets: [
+      "<strong>21 g de glucides</strong> + BCAA (1725 mg) + taurine",
+      "Formule ultra-endurance avec acides amines",
+      "Grande variete de saveurs (10+)",
+      "Reference mondiale depuis 1993"
+    ],
+    testUrl: "/tests/gu-roctane",
+    productUrl: "https://guenergy.com/",
+    featured: false
+  },
+  {
+    rank: 6,
+    brand: "Naak",
+    name: "Ultra Energy Gel",
+    image: "/images/products/naak-gel.webp",
+    score: 8.3,
+    price: "42,00 €",
+    priceDose: "3,50 €",
+    keySpecLabel: "Glucides",
+    keySpec: "27 g",
+    bullets: [
+      "<strong>27 g de glucides</strong> ratio fructose/maltodextrine 1:0,8",
+      "Enrichi en <strong>proteines de grillon</strong> (5 g)",
+      "Source durable et eco-responsable",
+      "Populaire chez les ultra-traileurs"
+    ],
+    testUrl: "/tests/naak-ultra-energy",
+    productUrl: "https://naak.com/",
+    featured: false
+  },
+  {
+    rank: 7,
+    brand: "MelTonic",
+    name: "Gel Energetique Bio",
+    image: "/images/products/meltonic-gel.webp",
+    score: 8.1,
+    price: "30,00 €",
+    priceDose: "2,50 €",
+    keySpecLabel: "Glucides",
+    keySpec: "20 g",
+    bullets: [
+      "<strong>20 g de glucides</strong> issus de miel bio francais",
+      "100% bio, ingredients naturels",
+      "Fabrication artisanale en France",
+      "Texture epaisse, gout miel prononce"
+    ],
+    testUrl: "/tests/meltonic-gel-bio",
+    productUrl: "https://www.meltonic.com/",
+    featured: false
+  },
+  {
+    rank: 8,
+    brand: "Precision Fuel",
+    name: "PF 30 Gel",
+    image: "/images/products/precision-fuel-gel.webp",
+    score: 8.0,
+    price: "36,00 €",
+    priceDose: "3,00 €",
+    keySpecLabel: "Glucides",
+    keySpec: "30 g",
+    bullets: [
+      "<strong>30 g de glucides</strong> par gel (ratio 1:0,8)",
+      "Developpe avec des donnees de tests de sueur",
+      "Gout neutre, texture fluide",
+      "Utilise par des equipes World Tour en cyclisme"
+    ],
+    testUrl: "/tests/precision-fuel-pf30",
+    productUrl: "https://www.precisionfuelandhydration.com/",
+    featured: false
+  },
+  {
+    rank: 9,
+    brand: "Nutripure",
+    name: "Gel Long Distance",
+    image: "/images/products/nutripure-gel.webp",
+    score: 7.8,
+    price: "29,90 €",
+    priceDose: "2,49 €",
+    keySpecLabel: "Glucides",
+    keySpec: "23 g",
+    bullets: [
+      "<strong>23 g de glucides</strong> (cluster dextrine + fructose)",
+      "Formule clean label, sans additifs controverses",
+      "Enrichi en vitamines B1, B6",
+      "Marque francaise, fabrication hexagonale"
+    ],
+    testUrl: "/tests/nutripure-gel-long-distance",
+    productUrl: "https://www.nutripure.fr/",
+    featured: false
+  },
+  {
+    rank: 10,
+    brand: "High5",
+    name: "Energy Gel Aqua",
+    image: "/images/products/high5-gel.webp",
+    score: 7.6,
+    price: "25,00 €",
+    priceDose: "1,67 €",
+    keySpecLabel: "Glucides",
+    keySpec: "23 g",
+    bullets: [
+      "<strong>23 g de glucides</strong> par gel isotonique (66 g)",
+      "Pas besoin d'eau, texture tres liquide",
+      "Bon rapport qualite-prix",
+      "Saveurs fruitees agreables"
+    ],
+    testUrl: "/tests/high5-energy-gel-aqua",
+    productUrl: "https://highfive.co.uk/",
+    featured: false
+  }
+];
+---
+
+<BaseLayout
+  title="Meilleur Gel Energetique 2026 - Comparatif et Top 10 pour Marathon et Trail"
+  description="Decouvrez notre top 10 des meilleurs gels energetiques pour la course a pied en 2026. Comparatif independant : composition, glucides, prix et tests terrain pour marathon et trail."
+  canonical="/comparatifs/gels-energetiques"
+  schema={schemaOrg}
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href="/comparatifs/gels-energetiques">Comparatifs</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Gels energetiques</span>
+    </nav>
+    <h1>Comparatif des meilleurs gels energetiques 2026</h1>
+    <p>Top 10 des gels energetiques testes et compares pour le marathon, le trail et la course a pied. Composition, digestibilite, rapport qualite-prix : notre classement independant.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div style="max-width:800px;margin:0 auto 48px;font-size:1.05rem;line-height:1.8;color:var(--text-dark-secondary);">
+      <p>Le choix d'un gel energetique est determinant pour vos performances en course a pied. Un bon gel doit apporter entre <strong style="color:var(--text-dark);">20 et 35 g de glucides</strong> rapidement assimilables, etre digestible meme a haute intensite, et contenir les electrolytes necessaires pour compenser les pertes par la sueur.</p>
+      <p style="margin-top:16px;">Notre equipe a teste chaque gel sur le terrain (marathon, trail, seances longues) et analyse la composition nutritionnelle en detail. Voici notre classement pour 2026, du meilleur au moins bon.</p>
+    </div>
+
+    <details style="max-width:800px;margin:0 auto 48px;background:var(--bg-alt);border-radius:var(--radius-md);padding:0;">
+      <summary style="padding:16px 20px;cursor:pointer;font-family:var(--font-heading);font-weight:600;font-size:0.95rem;color:var(--text-dark);">Notre methodologie de test</summary>
+      <div style="padding:0 20px 16px;font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.7;">
+        <p>Chaque gel est evalue selon <strong>12 criteres</strong> ponderes :</p>
+        <ul style="margin:12px 0;padding-left:20px;">
+          <li><strong>Composition</strong> (25%) : type et quantite de glucides, ratio maltodextrine/fructose, electrolytes</li>
+          <li><strong>Digestibilite</strong> (20%) : tolerance gastrique testee sur effort long (2h+)</li>
+          <li><strong>Efficacite terrain</strong> (20%) : ressenti energetique, rapidite d'action</li>
+          <li><strong>Gout et texture</strong> (15%) : palatabilite pendant l'effort, facilite de prise</li>
+          <li><strong>Rapport qualite-prix</strong> (10%) : cout par gel et par gramme de glucides</li>
+          <li><strong>Praticite</strong> (10%) : format, ouverture, transport</li>
+        </ul>
+        <p>Les prix indiques sont les prix boite (12 gels) constates en aout 2026. Le cout par dose correspond au prix unitaire.</p>
+      </div>
+    </details>
+
+    <div class="products-grid">
+      {products.map(p => (
+        <ProductCard
+          rank={p.rank}
+          brand={p.brand}
+          name={p.name}
+          image={p.image}
+          score={p.score}
+          price={p.price}
+          priceDose={p.priceDose}
+          keySpec={p.keySpec}
+          keySpecLabel={p.keySpecLabel}
+          bullets={p.bullets}
+          testUrl={p.testUrl}
+          productUrl={p.productUrl}
+          featured={p.featured}
+        />
+      ))}
+    </div>
+
+    <!-- Guide d'achat -->
+    <div style="max-width:800px;margin:64px auto 0;">
+      <h2 style="font-size:1.6rem;margin-bottom:24px;">Guide : comment choisir son gel energetique ?</h2>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">1. Le type et la quantite de glucides</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Les meilleurs gels combinent <strong style="color:var(--text-dark);">maltodextrine et fructose</strong> dans un ratio proche de 2:1. Cette combinaison exploite deux voies d'absorption intestinale distinctes (transporteur SGLT1 pour le glucose, GLUT5 pour le fructose), permettant d'assimiler jusqu'a 90 g/h de glucides sans surcharger le systeme digestif. Visez entre 20 et 35 g de glucides par gel.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">2. Les electrolytes</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Un gel qui integre du <strong style="color:var(--text-dark);">sodium, potassium et magnesium</strong> compense directement les pertes minerales liees a la transpiration. C'est un avantage significatif par rapport aux gels sans electrolytes, qui necessitent un apport mineral complementaire via une boisson.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">3. La digestibilite</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Les troubles gastro-intestinaux sont la premiere cause d'abandon en marathon et en trail. Un gel bien formule doit passer sans inconfort, meme a haute intensite. Les gels isotoniques (SIS, High5) et les formules fluides (NutriForce, Overstim's) sont generalement mieux toleres que les textures epaisses.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">4. Le moment de prise</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Prenez votre premier gel entre le 30e et le 45e minute d'effort, puis un gel toutes les 20 a 30 minutes. Visez 60 a 90 g de glucides par heure sur marathon. Accompagnez toujours d'eau (sauf gels isotoniques). Ne melangez jamais gel + boisson energetique au meme moment.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">5. Le gout et la praticite</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Testez toujours vos gels a l'entrainement. Un gel au gout ecourant apres 3 heures de course ne sera pas consomme, meme s'il a la meilleure composition. Verifiez aussi la facilite d'ouverture (certains sachets necessitent les deux mains) et le format de transport (gilet, ceinture).</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ specifique gels -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Questions frequentes sur les gels energetiques</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Combien de gels prendre pendant un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">La recommandation est de 60 a 90 g de glucides par heure. Avec un gel de 25-30 g de glucides, cela represente 2 a 3 gels par heure. Sur un marathon de 3h30, prevoyez 6 a 8 gels au total. Commencez la prise au km 10 (environ 45 min) et espacez regulierement toutes les 20-25 minutes.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Gel energetique avec ou sans cafeine ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">La cafeine ameliore la performance de 2 a 5% selon les etudes. Elle est particulierement efficace en deuxieme partie de course quand la fatigue s'installe. Dose recommandee : 3 a 6 mg/kg de poids corporel repartis sur l'effort. Reservez les gels cafeines pour la seconde moitie de course et testez votre tolerance a l'entrainement.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Peut-on fabriquer ses propres gels energetiques ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, c'est possible avec de la maltodextrine en poudre, du miel ou du sirop d'erable, une pincee de sel et de l'eau. Cependant, le dosage precis des glucides et des electrolytes est difficile a maitriser, et la conservation sans additifs limite la duree de stockage. Pour des courses importantes, les gels commerciaux offrent une fiabilite et une praticite superieures.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quelle difference entre gel isotonique et gel classique ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Un gel isotonique contient suffisamment d'eau pour etre absorbe sans apport hydrique supplementaire. Sa concentration en particules est equivalente a celle du sang, ce qui facilite l'absorption intestinale. Un gel classique est plus concentre et necessite d'etre pris avec de l'eau pour eviter les troubles digestifs. Les gels isotoniques sont plus volumineux mais plus pratiques en course.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Explorez nos autres comparatifs</h2>
+    <p class="section-subtitle">Electrolytes, boissons isotoniques, complements : trouvez tout ce qu'il faut pour performer.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/comparatifs/electrolytes" class="btn btn-primary">Comparatif electrolytes</a>
+      <a href="/comparatifs/boissons-isotoniques" class="btn btn-secondary">Boissons isotoniques</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

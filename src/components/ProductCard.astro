@@ -1,0 +1,51 @@
+---
+interface Props {
+  rank: number;
+  brand: string;
+  name: string;
+  image: string;
+  score: number;
+  price: string;
+  priceDose: string;
+  keySpec: string;
+  keySpecLabel: string;
+  bullets: string[];
+  testUrl: string;
+  productUrl: string;
+  featured?: boolean;
+}
+
+const { rank, brand, name, image, score, price, priceDose, keySpec, keySpecLabel, bullets, testUrl, productUrl, featured = false } = Astro.props;
+---
+
+<div class={`product-card ${featured ? 'featured' : ''}`}>
+  <div class={`product-badge ${rank === 1 ? 'best' : 'other'}`}>{rank}</div>
+  <img src={image} alt={`${brand} ${name}`} title={`${brand} ${name}`} class="product-img" width="140" height="140" loading="lazy" />
+  <div class="product-brand">{brand}</div>
+  <h3>{name}</h3>
+  <div class="card-score">
+    <span class="card-score-num">{score}</span>
+    <span class="card-score-max">/10</span>
+  </div>
+  <div class="card-specs">
+    <div>
+      <div class="card-spec-label">Prix</div>
+      <div class="card-spec-val">{price}</div>
+    </div>
+    <div>
+      <div class="card-spec-label">Cout/dose</div>
+      <div class="card-spec-val">{priceDose}</div>
+    </div>
+    <div>
+      <div class="card-spec-label">{keySpecLabel}</div>
+      <div class="card-spec-val">{keySpec}</div>
+    </div>
+  </div>
+  <ul class="card-bullets">
+    {bullets.map(b => <li set:html={b} />)}
+  </ul>
+  <div class="card-bottom">
+    <a href={testUrl} class={`card-cta ${featured ? 'card-cta--primary' : 'card-cta--secondary'}`}>Lire notre test complet</a>
+    <a href={productUrl} class="card-link" target="_blank" rel="noopener nofollow">Voir le produit &rarr;</a>
+  </div>
+</div>

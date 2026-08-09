@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/global.css';
+
+const articles = [
+  {
+    title: "Nutrition marathon : le guide complet pour performer le jour J",
+    description: "Strategie nutritionnelle complete : que manger avant, pendant et apres un marathon. Plan de ravitaillement detaille.",
+    url: "/articles/nutrition-marathon",
+    category: "Nutrition",
+    readTime: "12 min",
+    emoji: "🏃"
+  },
+  {
+    title: "Comment choisir son gel energetique en 2026",
+    description: "Maltodextrine, fructose, cafeine, BCAA : comment lire les etiquettes et trouver le gel adapte a votre profil.",
+    url: "/articles/choisir-gel-energetique",
+    category: "Guide",
+    readTime: "10 min",
+    emoji: "⚡"
+  },
+  {
+    title: "Debuter le trail running : equipement, nutrition et entrainement",
+    description: "Guide complet pour passer de la route aux sentiers. Chaussures, sac, plan d'entrainement et erreurs a eviter.",
+    url: "/articles/debuter-trail",
+    category: "Debutant",
+    readTime: "14 min",
+    emoji: "🏔️"
+  }
+];
+---
+
+<BaseLayout
+  title="Articles Running et Trail - Guides Nutrition, Entrainement et Equipement"
+  description="Guides pratiques pour la course a pied et le trail running. Nutrition marathon, choix de gels energetiques, entrainement trail et conseils pour debutants."
+  canonical="/articles"
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Articles</span>
+    </nav>
+    <h1>Articles et guides</h1>
+    <p>Guides pratiques, conseils nutrition et entrainement pour progresser en course a pied et trail running.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="articles-grid">
+      {articles.map(a => (
+        <a href={a.url} class="article-card fade-in">
+          <div style={`width:100%;height:200px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;`}>
+            <span style="font-size:3rem;">{a.emoji}</span>
+          </div>
+          <div class="article-card-content">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <span class="article-card-tag">{a.category}</span>
+              <span style="font-size:0.8rem;color:var(--text-dark-secondary);">{a.readTime}</span>
+            </div>
+            <h3>{a.title}</h3>
+            <p>{a.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Explorez nos comparatifs</h2>
+    <p class="section-subtitle">Gels, electrolytes, boissons isotoniques : trouvez les meilleurs produits.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Gels energetiques</a>
+      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Electrolytes</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

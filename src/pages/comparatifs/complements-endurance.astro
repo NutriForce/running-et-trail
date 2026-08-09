@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import '../../styles/global.css';
+
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Comparatif des meilleurs complements pour l'endurance 2026",
+  "description": "Top 10 des meilleurs complements alimentaires pour la course a pied, le trail et l'endurance. BCAA, cafeine, beta-alanine, fer : tests et avis independants.",
+  "author": { "@type": "Organization", "name": "Running et Trail" },
+  "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09"
+});
+
+const products = [
+  {
+    rank: 1,
+    brand: "NutriForce",
+    name: "Pack Endurance Complete",
+    image: "/images/products/nutriforce-pack-endurance.webp",
+    score: 9.3,
+    price: "49,99 €",
+    priceDose: "1,67 €",
+    keySpecLabel: "Formule",
+    keySpec: "All-in-1",
+    bullets: [
+      "<strong>BCAA 2:1:1</strong> (5g) + L-glutamine (2g) + taurine",
+      "<strong>Cafeine naturelle</strong> (guarana, 100 mg) + beta-alanine",
+      "Fer bisglycinate (14 mg) + vitamines B + magnesium",
+      "Formule tout-en-un specifique endurance",
+      "Fabrique en France, teste en laboratoire"
+    ],
+    testUrl: "/tests/nutriforce-pack-endurance",
+    productUrl: "https://nutriforce.fr/",
+    featured: true
+  },
+  {
+    rank: 2,
+    brand: "Nutripure",
+    name: "BCAA Endurance 2:1:1",
+    image: "/images/products/nutripure-bcaa.webp",
+    score: 8.9,
+    price: "29,90 €",
+    priceDose: "1,00 €",
+    keySpecLabel: "BCAA",
+    keySpec: "6 g",
+    bullets: [
+      "<strong>6 g de BCAA</strong> ratio 2:1:1 (leucine, isoleucine, valine)",
+      "Issu de fermentation vegetale, vegan",
+      "Sans edulcorant artificiel, clean label",
+      "Marque francaise transparente sur les dosages"
+    ],
+    testUrl: "/tests/nutripure-bcaa-endurance",
+    productUrl: "https://www.nutripure.fr/",
+    featured: false
+  },
+  {
+    rank: 3,
+    brand: "Bulk",
+    name: "Beta-Alanine Pure",
+    image: "/images/products/bulk-beta-alanine.webp",
+    score: 8.7,
+    price: "14,99 €",
+    priceDose: "0,15 €",
+    keySpecLabel: "Dose",
+    keySpec: "3,2 g",
+    bullets: [
+      "<strong>3,2 g de beta-alanine</strong> pure par dose",
+      "Retarde l'accumulation d'acide lactique",
+      "Efficacite prouvee sur efforts de 1 a 4 min",
+      "Excellent rapport qualite-prix"
+    ],
+    testUrl: "/tests/bulk-beta-alanine",
+    productUrl: "https://www.bulk.com/",
+    featured: false
+  },
+  {
+    rank: 4,
+    brand: "Myprotein",
+    name: "Cafeine 200mg",
+    image: "/images/products/myprotein-cafeine.webp",
+    score: 8.5,
+    price: "9,99 €",
+    priceDose: "0,05 €",
+    keySpecLabel: "Cafeine",
+    keySpec: "200 mg",
+    bullets: [
+      "<strong>200 mg de cafeine</strong> anhydre par gelule",
+      "Ameliore la performance de 2-5% (meta-analyses)",
+      "200 gelules par pot, 7 mois d'utilisation",
+      "Le complement le plus etudie scientifiquement"
+    ],
+    testUrl: "/tests/myprotein-cafeine",
+    productUrl: "https://www.myprotein.fr/",
+    featured: false
+  },
+  {
+    rank: 5,
+    brand: "Nutri&Co",
+    name: "Fer Bisglycinate",
+    image: "/images/products/nutrico-fer.webp",
+    score: 8.4,
+    price: "16,90 €",
+    priceDose: "0,28 €",
+    keySpecLabel: "Fer",
+    keySpec: "14 mg",
+    bullets: [
+      "<strong>14 mg de fer bisglycinate</strong>, haute biodisponibilite",
+      "Enrichi en vitamine C pour optimiser l'absorption",
+      "Forme chelatee : zero troubles digestifs",
+      "Essentiel pour les coureuses (60% de deficience)"
+    ],
+    testUrl: "/tests/nutrico-fer-bisglycinate",
+    productUrl: "https://nutriandco.com/",
+    featured: false
+  },
+  {
+    rank: 6,
+    brand: "Supersmart",
+    name: "Coenzyme Q10",
+    image: "/images/products/supersmart-coq10.webp",
+    score: 8.2,
+    price: "24,90 €",
+    priceDose: "0,42 €",
+    keySpecLabel: "CoQ10",
+    keySpec: "200 mg",
+    bullets: [
+      "<strong>200 mg de CoQ10</strong> ubiquinol (forme active)",
+      "Soutient la production d'energie cellulaire (ATP)",
+      "Puissant antioxydant, protege les cellules du stress oxydatif",
+      "Particulierement utile apres 35 ans"
+    ],
+    testUrl: "/tests/supersmart-coq10",
+    productUrl: "https://www.supersmart.com/",
+    featured: false
+  },
+  {
+    rank: 7,
+    brand: "Nutrimuscle",
+    name: "Creatine Creapure",
+    image: "/images/products/nutrimuscle-creatine.webp",
+    score: 8.0,
+    price: "19,95 €",
+    priceDose: "0,13 €",
+    keySpecLabel: "Creatine",
+    keySpec: "3 g",
+    bullets: [
+      "<strong>3 g de creatine monohydrate</strong> Creapure (qualite allemande)",
+      "Ameliore la puissance sur efforts repetes et sprints",
+      "Le complement le plus etudie (700+ etudes)",
+      "Utile pour les seances de cotes et le fractionne"
+    ],
+    testUrl: "/tests/nutrimuscle-creatine",
+    productUrl: "https://www.nutrimuscle.com/",
+    featured: false
+  },
+  {
+    rank: 8,
+    brand: "Solgar",
+    name: "Vitamine D3 2000 UI",
+    image: "/images/products/solgar-vitd3.webp",
+    score: 7.8,
+    price: "14,50 €",
+    priceDose: "0,10 €",
+    keySpecLabel: "Vit D3",
+    keySpec: "2000 UI",
+    bullets: [
+      "<strong>2000 UI de vitamine D3</strong> par gelule",
+      "80% des francais en deficience en hiver",
+      "Essentielle pour les os, l'immunite et la force musculaire",
+      "A prendre d'octobre a avril minimum"
+    ],
+    testUrl: "/tests/solgar-vitamine-d3",
+    productUrl: "https://www.solgar.fr/",
+    featured: false
+  },
+  {
+    rank: 9,
+    brand: "HSN",
+    name: "L-Citrulline Malate 2:1",
+    image: "/images/products/hsn-citrulline.webp",
+    score: 7.6,
+    price: "16,90 €",
+    priceDose: "0,28 €",
+    keySpecLabel: "Citrulline",
+    keySpec: "6 g",
+    bullets: [
+      "<strong>6 g de citrulline malate</strong> ratio 2:1",
+      "Ameliore la vasodilatation et l'oxygene musculaire",
+      "Reduit la fatigue et les courbatures post-effort",
+      "Efficace sur efforts de 30 min a 2h"
+    ],
+    testUrl: "/tests/hsn-citrulline-malate",
+    productUrl: "https://www.hsnstore.fr/",
+    featured: false
+  },
+  {
+    rank: 10,
+    brand: "Nordic Naturals",
+    name: "Omega-3 Ultimate",
+    image: "/images/products/nordic-omega3.webp",
+    score: 7.4,
+    price: "32,00 €",
+    priceDose: "0,53 €",
+    keySpecLabel: "EPA+DHA",
+    keySpec: "1100 mg",
+    bullets: [
+      "<strong>1100 mg EPA + DHA</strong> par dose",
+      "Anti-inflammatoire naturel, accelere la recuperation",
+      "Soutient la sante cardiovasculaire",
+      "Certifie IFOS 5 etoiles (purete maximale)"
+    ],
+    testUrl: "/tests/nordic-naturals-omega3",
+    productUrl: "https://www.nordicnaturals.com/",
+    featured: false
+  }
+];
+---
+
+<BaseLayout
+  title="Meilleurs Complements Endurance 2026 - Top 10 Course a Pied et Trail"
+  description="Top 10 des meilleurs complements alimentaires pour l'endurance en 2026. BCAA, cafeine, beta-alanine, fer, creatine : guide complet et comparatif independant pour coureurs et traileurs."
+  canonical="/comparatifs/complements-endurance"
+  schema={schemaOrg}
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href="/comparatifs/complements-endurance">Comparatifs</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Complements endurance</span>
+    </nav>
+    <h1>Comparatif des meilleurs complements pour l'endurance 2026</h1>
+    <p>BCAA, cafeine, beta-alanine, fer, creatine : quels complements fonctionnent vraiment pour la course a pied et le trail ? Notre classement base sur les etudes scientifiques et les tests terrain.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div style="max-width:800px;margin:0 auto 48px;font-size:1.05rem;line-height:1.8;color:var(--text-dark-secondary);">
+      <p>Les complements alimentaires pour l'endurance se divisent en deux categories : ceux qui <strong style="color:var(--text-dark);">ameliorent directement la performance</strong> (cafeine, beta-alanine, creatine, citrulline) et ceux qui <strong style="color:var(--text-dark);">previennent les carences</strong> frequentes chez les coureurs (fer, vitamine D, omega-3, magnesium).</p>
+      <p style="margin-top:16px;">Notre classement privilegie les complements dont l'efficacite est soutenue par des meta-analyses solides (niveau de preuve A ou B selon la classification de l'AIS - Australian Institute of Sport).</p>
+    </div>
+
+    <details style="max-width:800px;margin:0 auto 48px;background:var(--bg-alt);border-radius:var(--radius-md);padding:0;">
+      <summary style="padding:16px 20px;cursor:pointer;font-family:var(--font-heading);font-weight:600;font-size:0.95rem;color:var(--text-dark);">Notre methodologie d'evaluation</summary>
+      <div style="padding:0 20px 16px;font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.7;">
+        <p>Chaque complement est evalue selon :</p>
+        <ul style="margin:12px 0;padding-left:20px;">
+          <li><strong>Evidence scientifique</strong> (35%) : nombre et qualite des etudes, meta-analyses, classification AIS</li>
+          <li><strong>Dosage et formulation</strong> (25%) : conformite aux doses efficaces, forme biodisponible</li>
+          <li><strong>Qualite et transparence</strong> (15%) : certifications, analyses tierces, clean label</li>
+          <li><strong>Rapport qualite-prix</strong> (15%) : cout par dose efficace</li>
+          <li><strong>Praticite</strong> (10%) : format, facilite de prise, combinabilite</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="products-grid">
+      {products.map(p => (
+        <ProductCard
+          rank={p.rank}
+          brand={p.brand}
+          name={p.name}
+          image={p.image}
+          score={p.score}
+          price={p.price}
+          priceDose={p.priceDose}
+          keySpec={p.keySpec}
+          keySpecLabel={p.keySpecLabel}
+          bullets={p.bullets}
+          testUrl={p.testUrl}
+          productUrl={p.productUrl}
+          featured={p.featured}
+        />
+      ))}
+    </div>
+
+    <div style="max-width:800px;margin:64px auto 0;">
+      <h2 style="font-size:1.6rem;margin-bottom:24px;">Guide : les complements qui marchent vraiment</h2>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">Niveau A (efficacite prouvee)</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;"><strong style="color:var(--text-dark);">Cafeine</strong> : le complement le mieux documente pour l'endurance. 3 a 6 mg/kg ameliore la performance de 2 a 5%. Agit sur la perception de l'effort et la mobilisation des acides gras. <strong style="color:var(--text-dark);">Beta-alanine</strong> : 3,2 a 6,4 g/jour pendant 4+ semaines augmente les stocks de carnosine musculaire de 60-80%, retardant l'acidose. <strong style="color:var(--text-dark);">Creatine</strong> : ameliore la puissance sur efforts repetes (cotes, sprints, fractionne).</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">Niveau B (evidence emergente)</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;"><strong style="color:var(--text-dark);">BCAA</strong> : reduisent la fatigue centrale sur ultra (5+ heures) en limitant l'entree du tryptophane dans le cerveau. <strong style="color:var(--text-dark);">Citrulline</strong> : ameliore la vasodilatation et l'oxygene musculaire, resultats prometteurs sur efforts de 30 min a 2 h. <strong style="color:var(--text-dark);">CoQ10</strong> : soutient la chaine respiratoire mitochondriale, potentiellement utile apres 35 ans.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">Complements de sante (prevenir les carences)</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;"><strong style="color:var(--text-dark);">Fer</strong> : 60% des coureuses et 30% des coureurs sont deficients. Le fer bisglycinate est la forme la mieux toleree. Faites un bilan sanguin (ferritine) avant de supplementer. <strong style="color:var(--text-dark);">Vitamine D</strong> : deficitaire chez 80% des francais en hiver. Essentielle pour l'immunite, les os et la force musculaire. <strong style="color:var(--text-dark);">Omega-3</strong> : anti-inflammatoire naturel, accelere la recuperation, soutient le systeme cardiovasculaire.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Questions frequentes sur les complements d'endurance</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Quels complements prendre pour un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">En preparation : beta-alanine (4 semaines avant, 3,2 g/jour), fer et vitamine D si carence identifiee. Le jour J : cafeine (3-6 mg/kg, repartie pendant la course). En recuperation : omega-3, BCAA et glutamine. La base reste une alimentation equilibree riche en glucides complexes, proteines et micronutriments.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">La creatine est-elle utile pour la course a pied ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, mais pas pour les memes raisons qu'en musculation. La creatine ameliore la puissance sur les efforts repetes courts : sprints, cotes, fractionne, dernier kilometre. Elle n'ameliore pas directement l'endurance aerobique. Elle peut provoquer une legere prise de poids (eau intracellulaire), a prendre en compte si vous courez en competition.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Faut-il faire un bilan sanguin avant de se supplementer ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, c'est fortement recommande pour le fer (ferritine + hemoglobine), la vitamine D (25-OH-D) et le magnesium (erythrocytaire). Se supplementer sans carence identifiee est inutile et peut meme etre contre-productif (exces de fer par exemple). Les complements ergogeniques (cafeine, beta-alanine, creatine) ne necessitent pas de bilan prealable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Explorez nos autres comparatifs</h2>
+    <p class="section-subtitle">Gels, electrolytes, boissons isotoniques : tout pour votre nutrition.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Comparatif gels</a>
+      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Comparatif electrolytes</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

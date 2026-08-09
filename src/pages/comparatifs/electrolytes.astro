@@ -1,0 +1,344 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import '../../styles/global.css';
+
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Comparatif des meilleurs electrolytes 2026 pour la course a pied",
+  "description": "Top 10 des meilleurs electrolytes pour le running et le trail. Tests independants : sodium, potassium, magnesium, prix et digestibilite compares.",
+  "author": { "@type": "Organization", "name": "Running et Trail" },
+  "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09"
+});
+
+const products = [
+  {
+    rank: 1,
+    brand: "NutriForce",
+    name: "Electrolytes en Poudre",
+    image: "/images/products/nutriforce-electrolytes.webp",
+    score: 9.3,
+    price: "24,99 €",
+    priceDose: "0,83 €",
+    keySpecLabel: "Potassium",
+    keySpec: "350 mg",
+    bullets: [
+      "<strong>4 mineraux + 9 vitamines</strong> + 1000 mg L-glutamine",
+      "<strong>350 mg potassium</strong>, 113 mg magnesium, sodium, bicarbonate",
+      "Ultra-digeste, dissolution instantanee, enrichi en glutamine",
+      "4 saveurs : cassis, fruits rouges, citron vert, menthe",
+      "Fabrique en France, teste en laboratoire"
+    ],
+    testUrl: "/tests/nutriforce-electrolytes",
+    productUrl: "https://nutriforce.fr/product/electrolytes-en-poudre/",
+    featured: true
+  },
+  {
+    rank: 2,
+    brand: "Precision Hydration",
+    name: "PH 1500",
+    image: "/images/products/precision-ph1500.webp",
+    score: 9.0,
+    price: "14,50 €",
+    priceDose: "1,45 €",
+    keySpecLabel: "Sodium",
+    keySpec: "1500 mg",
+    bullets: [
+      "<strong>1500 mg de sodium</strong> par litre, ideal gros transpirants",
+      "Pastilles effervescentes, zero calorie",
+      "Developpe a partir de tests de sueur individuels",
+      "Utilise par des athletes professionnels"
+    ],
+    testUrl: "/tests/precision-hydration-ph1500",
+    productUrl: "https://www.precisionfuelandhydration.com/",
+    featured: false
+  },
+  {
+    rank: 3,
+    brand: "Nuun",
+    name: "Sport Electrolytes",
+    image: "/images/products/nuun-sport.webp",
+    score: 8.7,
+    price: "9,50 €",
+    priceDose: "0,95 €",
+    keySpecLabel: "Sodium",
+    keySpec: "300 mg",
+    bullets: [
+      "<strong>300 mg de sodium</strong> par pastille effervescente",
+      "Seulement 15 calories, sans sucre ajoute",
+      "10 pastilles par tube, facile a transporter",
+      "Large gamme de saveurs fruitees"
+    ],
+    testUrl: "/tests/nuun-sport",
+    productUrl: "https://nuunlife.com/",
+    featured: false
+  },
+  {
+    rank: 4,
+    brand: "Nutri&Co",
+    name: "Electrolytes Sport",
+    image: "/images/products/nutrico-electrolytes.webp",
+    score: 8.5,
+    price: "22,90 €",
+    priceDose: "0,76 €",
+    keySpecLabel: "Sodium",
+    keySpec: "460 mg/L",
+    bullets: [
+      "4 electrolytes : <strong>sodium, potassium, magnesium, zinc</strong>",
+      "Dosage conforme aux recommandations ACSM",
+      "Format poudre, 30 doses par pot",
+      "Marque francaise, clean label"
+    ],
+    testUrl: "/tests/nutrico-electrolytes",
+    productUrl: "https://nutriandco.com/",
+    featured: false
+  },
+  {
+    rank: 5,
+    brand: "SIS",
+    name: "GO Electrolyte",
+    image: "/images/products/sis-electrolyte.webp",
+    score: 8.3,
+    price: "27,99 €",
+    priceDose: "1,56 €",
+    keySpecLabel: "Glucides",
+    keySpec: "36 g",
+    bullets: [
+      "<strong>36 g de glucides</strong> + electrolytes par dose",
+      "Boisson 2-en-1 energie + hydratation",
+      "Osmolarite optimisee pour absorption rapide",
+      "Certifie Informed Sport"
+    ],
+    testUrl: "/tests/sis-go-electrolyte",
+    productUrl: "https://www.scienceinsport.com/",
+    featured: false
+  },
+  {
+    rank: 6,
+    brand: "Enako",
+    name: "Hydratation Electrolytes",
+    image: "/images/products/enako-electrolytes.webp",
+    score: 8.1,
+    price: "19,90 €",
+    priceDose: "0,66 €",
+    keySpecLabel: "Sodium",
+    keySpec: "250 mg",
+    bullets: [
+      "<strong>250 mg de sodium</strong> + potassium + magnesium",
+      "Format stick pratique pour la course",
+      "Sans sucre, sans edulcorant artificiel",
+      "Bonne dissolution, gout agreable"
+    ],
+    testUrl: "/tests/enako-electrolytes",
+    productUrl: "https://enako.fr/",
+    featured: false
+  },
+  {
+    rank: 7,
+    brand: "Punch Power",
+    name: "Speedox Electrolytes",
+    image: "/images/products/punch-power-speedox.webp",
+    score: 7.9,
+    price: "16,90 €",
+    priceDose: "0,85 €",
+    keySpecLabel: "Sodium",
+    keySpec: "200 mg",
+    bullets: [
+      "<strong>200 mg de sodium</strong> + antioxydants",
+      "Bio certifie, ingredients naturels",
+      "Pastilles effervescentes pratiques",
+      "Fabrication francaise"
+    ],
+    testUrl: "/tests/punch-power-speedox",
+    productUrl: "https://www.punchpower.com/",
+    featured: false
+  },
+  {
+    rank: 8,
+    brand: "Maurten",
+    name: "Drink Mix 160",
+    image: "/images/products/maurten-drink-mix.webp",
+    score: 7.8,
+    price: "35,00 €",
+    priceDose: "4,38 €",
+    keySpecLabel: "Glucides",
+    keySpec: "40 g",
+    bullets: [
+      "<strong>40 g de glucides</strong> + electrolytes (technologie hydrogel)",
+      "Absorption gastrique reduite grace a l'encapsulation",
+      "Gout neutre, parfait pour les estomacs sensibles",
+      "Prix eleve, reserve aux courses importantes"
+    ],
+    testUrl: "/tests/maurten-drink-mix-160",
+    productUrl: "https://www.maurten.com/",
+    featured: false
+  },
+  {
+    rank: 9,
+    brand: "Overstim's",
+    name: "Hydrixir Antioxydant",
+    image: "/images/products/overstims-hydrixir.webp",
+    score: 7.6,
+    price: "19,50 €",
+    priceDose: "0,98 €",
+    keySpecLabel: "Glucides",
+    keySpec: "30 g",
+    bullets: [
+      "<strong>30 g de glucides</strong> + sodium, magnesium, vitamines",
+      "Formule antioxydante avec vitamine C et E",
+      "Marque historique francaise, 35+ ans d'experience",
+      "Plusieurs parfums disponibles"
+    ],
+    testUrl: "/tests/overstims-hydrixir",
+    productUrl: "https://www.overstims.com/",
+    featured: false
+  },
+  {
+    rank: 10,
+    brand: "Ta Energy",
+    name: "Hydration Tabs",
+    image: "/images/products/ta-energy-tabs.webp",
+    score: 7.4,
+    price: "8,90 €",
+    priceDose: "0,89 €",
+    keySpecLabel: "Sodium",
+    keySpec: "350 mg",
+    bullets: [
+      "<strong>350 mg de sodium</strong> par pastille, zero calorie",
+      "Pastilles effervescentes, 10 par tube",
+      "Bon rapport qualite-prix pour l'entrainement",
+      "Saveurs classiques (citron, fruits rouges)"
+    ],
+    testUrl: "/tests/ta-energy-hydration-tabs",
+    productUrl: "https://taenergy.co/",
+    featured: false
+  }
+];
+---
+
+<BaseLayout
+  title="Meilleurs Electrolytes 2026 - Comparatif Top 10 Course a Pied et Trail"
+  description="Top 10 des meilleurs electrolytes pour le running et le trail en 2026. Comparatif independant : sodium, potassium, magnesium, prix et avis. Pastilles, poudres et boissons."
+  canonical="/comparatifs/electrolytes"
+  schema={schemaOrg}
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href="/comparatifs/electrolytes">Comparatifs</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Electrolytes</span>
+    </nav>
+    <h1>Comparatif des meilleurs electrolytes 2026</h1>
+    <p>Top 10 des electrolytes pour la course a pied et le trail. Sodium, potassium, magnesium : notre analyse complete des formulations et notre classement independant.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div style="max-width:800px;margin:0 auto 48px;font-size:1.05rem;line-height:1.8;color:var(--text-dark-secondary);">
+      <p>Les electrolytes sont indispensables pour tout coureur qui s'entraine plus d'une heure ou par temps chaud. <strong style="color:var(--text-dark);">Le sodium</strong> est le mineral le plus perdu par la sueur (700 a 1500 mg/L selon les individus), suivi du potassium, du magnesium et du calcium.</p>
+      <p style="margin-top:16px;">Une deshydratation de seulement 2% du poids corporel reduit les performances de 10 a 20%. Les electrolytes ne se limitent pas a boire plus d'eau : ils assurent que cette eau est correctement absorbee et retenue par l'organisme.</p>
+    </div>
+
+    <details style="max-width:800px;margin:0 auto 48px;background:var(--bg-alt);border-radius:var(--radius-md);padding:0;">
+      <summary style="padding:16px 20px;cursor:pointer;font-family:var(--font-heading);font-weight:600;font-size:0.95rem;color:var(--text-dark);">Notre methodologie de test</summary>
+      <div style="padding:0 20px 16px;font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.7;">
+        <p>Chaque produit est evalue selon <strong>10 criteres</strong> ponderes :</p>
+        <ul style="margin:12px 0;padding-left:20px;">
+          <li><strong>Profil mineral</strong> (30%) : equilibre sodium/potassium/magnesium, dosages adaptes a l'effort</li>
+          <li><strong>Efficacite d'hydratation</strong> (20%) : absorption, retention hydrique, performance en conditions reelles</li>
+          <li><strong>Digestibilite</strong> (15%) : tolerance pendant l'effort, absence de troubles gastriques</li>
+          <li><strong>Composition</strong> (15%) : clean label, absence d'edulcorants controverses, ingredients actifs</li>
+          <li><strong>Rapport qualite-prix</strong> (10%) : cout par dose et par gramme de mineraux</li>
+          <li><strong>Praticite</strong> (10%) : format (pastille, poudre, liquide), transport, preparation</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="products-grid">
+      {products.map(p => (
+        <ProductCard
+          rank={p.rank}
+          brand={p.brand}
+          name={p.name}
+          image={p.image}
+          score={p.score}
+          price={p.price}
+          priceDose={p.priceDose}
+          keySpec={p.keySpec}
+          keySpecLabel={p.keySpecLabel}
+          bullets={p.bullets}
+          testUrl={p.testUrl}
+          productUrl={p.productUrl}
+          featured={p.featured}
+        />
+      ))}
+    </div>
+
+    <!-- Guide d'achat -->
+    <div style="max-width:800px;margin:64px auto 0;">
+      <h2 style="font-size:1.6rem;margin-bottom:24px;">Guide : comment choisir ses electrolytes ?</h2>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">1. Le sodium avant tout</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Le sodium est le mineral cle pour l'hydratation sportive. L'American College of Sports Medicine recommande <strong style="color:var(--text-dark);">300 a 600 mg de sodium par heure</strong> d'effort. Les gros transpirants ou les coureurs en climat chaud peuvent avoir besoin de 1000 mg/h ou plus. Choisissez un produit dont le dosage en sodium correspond a votre profil.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">2. L'equilibre potassium-magnesium</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Le <strong style="color:var(--text-dark);">potassium</strong> intervient dans la contraction musculaire et la transmission nerveuse. Le <strong style="color:var(--text-dark);">magnesium</strong> previent les crampes et participe a la production d'energie (ATP). Un bon electrolyte apporte ces deux mineraux en complement du sodium, pas en remplacement.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">3. Avec ou sans glucides ?</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Les electrolytes purs (pastilles, poudres zero calorie) sont parfaits pour l'hydratation seule, combinables avec vos gels. Les boissons electrolytiques avec glucides (SIS, Overstim's) font double emploi : hydratation + energie. Evitez de cumuler une boisson glucidique avec des gels pour ne pas depasser 90 g/h de glucides.</p>
+
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">4. Le format adapte a votre pratique</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;"><strong style="color:var(--text-dark);">Pastilles effervescentes</strong> : legeres, faciles a transporter, ideales pour le trail avec des points d'eau. <strong style="color:var(--text-dark);">Poudre</strong> : dosage ajustable, meilleur rapport qualite-prix. <strong style="color:var(--text-dark);">Liquide concentre</strong> : pret a diluer, pratique pour les bidons.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Questions frequentes sur les electrolytes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Quand faut-il prendre des electrolytes ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Pour tout effort de plus d'une heure, ou plus court par temps chaud (au-dessus de 25 degres). Commencez a boire des la premiere demi-heure d'effort, par petites gorgees regulieres (150-200 ml toutes les 15-20 minutes). En pre-hydratation, vous pouvez prendre des electrolytes 2 heures avant une course importante pour optimiser votre statut hydrique de depart.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Peut-on prendre trop d'electrolytes ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, un exces de sodium peut provoquer des nausees, ballonnements et diarrhees. Respectez les dosages recommandes par le fabricant et ajustez selon votre taux de transpiration. En pratique, il est beaucoup plus courant de manquer d'electrolytes que d'en prendre trop pendant l'effort. L'hyponatremie (manque de sodium) est plus dangereuse que l'exces.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Electrolytes ou boisson isotonique ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Les electrolytes purs (pastilles, poudre zero calorie) hydratent sans apporter de calories. Ils se combinent parfaitement avec des gels energetiques. Les boissons isotoniques contiennent a la fois des electrolytes et des glucides (30-40 g par dose), fournissant hydratation et energie en une seule boisson. Si vous utilisez deja des gels, preferez les electrolytes purs pour eviter de surcharger votre apport glucidique.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Explorez nos autres comparatifs</h2>
+    <p class="section-subtitle">Gels, boissons isotoniques, complements : tout pour votre nutrition sport.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Comparatif gels</a>
+      <a href="/comparatifs/boissons-isotoniques" class="btn btn-secondary">Boissons isotoniques</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

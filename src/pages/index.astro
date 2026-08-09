@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Running et Trail",
+  "url": "https://running-et-trail.fr",
+  "description": "Comparatifs, tests et guides pour les coureurs et traileurs. Gels energetiques, electrolytes, boissons isotoniques et complements endurance.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://running-et-trail.fr/recherche?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+});
+---
+
+<BaseLayout
+  title="Running et Trail - Comparatifs, Tests et Guides pour Coureurs et Traileurs"
+  description="Comparatifs independants des meilleurs gels energetiques, electrolytes et boissons isotoniques. Guides nutrition, entrainement et equipement pour la course a pied et le trail."
+  canonical="/"
+  schema={schemaOrg}
+>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Courez plus loin, plus fort, mieux equipe</h1>
+    <p>Comparatifs independants, tests terrain et guides experts pour optimiser votre nutrition et vos performances en course a pied et trail running.</p>
+    <div class="hero-cta">
+      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Comparatif gels energetiques</a>
+      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Comparatif electrolytes</a>
+    </div>
+  </div>
+</section>
+
+<!-- Comparatifs -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Nos comparatifs</h2>
+    <p class="section-subtitle">Tests independants et analyses detaillees pour vous aider a choisir les meilleurs produits pour votre pratique.</p>
+    <div class="features-grid">
+      <a href="/comparatifs/gels-energetiques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">⚡</div>
+        <h3>Gels energetiques</h3>
+        <p>Top 10 des meilleurs gels pour le marathon et le trail. Composition, gout, digestibilite et rapport qualite-prix compares.</p>
+      </a>
+      <a href="/comparatifs/electrolytes" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">💧</div>
+        <h3>Electrolytes</h3>
+        <p>Comparatif des boissons et pastilles d'electrolytes. Sodium, potassium, magnesium - tout ce qu'il faut savoir.</p>
+      </a>
+      <a href="/comparatifs/boissons-isotoniques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">🥤</div>
+        <h3>Boissons isotoniques</h3>
+        <p>Les meilleures boissons isotoniques pour l'effort. Osmolarite, glucides et mineraux passes au crible.</p>
+      </a>
+      <a href="/comparatifs/complements-endurance" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">💊</div>
+        <h3>Complements endurance</h3>
+        <p>BCAA, creatine, beta-alanine, cafeine - quels complements fonctionnent vraiment pour les sports d'endurance ?</p>
+      </a>
+      <a href="/comparatifs/chaussures-running" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">👟</div>
+        <h3>Chaussures running</h3>
+        <p>Selection des meilleures chaussures de course par profil : route, trail, competitions et entrainement quotidien.</p>
+      </a>
+      <a href="/comparatifs/montres-gps" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">⌚</div>
+        <h3>Montres GPS</h3>
+        <p>Garmin, Coros, Polar, Suunto - comparatif des montres GPS pour le running, le trail et le triathlon.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section-dark">
+  <div class="container">
+    <div class="features-grid" style="text-align:center;">
+      <div class="fade-in">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">50+</div>
+        <p style="color:var(--text-light-secondary);margin-top:8px;">Produits testes</p>
+      </div>
+      <div class="fade-in">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">12</div>
+        <p style="color:var(--text-light-secondary);margin-top:8px;">Criteres d'evaluation</p>
+      </div>
+      <div class="fade-in">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">100%</div>
+        <p style="color:var(--text-light-secondary);margin-top:8px;">Tests independants</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Derniers articles</h2>
+    <p class="section-subtitle">Guides pratiques, conseils nutrition et entrainement pour progresser en course a pied et trail.</p>
+    <div class="articles-grid">
+      <a href="/articles/nutrition-marathon" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:3rem;">🏃</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Nutrition</span>
+          <h3>Nutrition marathon : le guide complet pour performer</h3>
+          <p>Strategie nutritionnelle avant, pendant et apres un marathon. Glucides, hydratation et supplementation.</p>
+        </div>
+      </a>
+      <a href="/articles/choisir-gel-energetique" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:3rem;">⚡</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Guide</span>
+          <h3>Comment choisir son gel energetique en 2025</h3>
+          <p>Maltodextrine, fructose, cafeine, BCAA - comment lire les etiquettes et trouver le gel qui vous convient.</p>
+        </div>
+      </a>
+      <a href="/articles/debuter-trail" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:3rem;">🏔️</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Debutant</span>
+          <h3>Debuter le trail : equipement, nutrition et entrainement</h3>
+          <p>Tout ce qu'il faut savoir pour se lancer dans le trail running : choix des chaussures, nutrition et plan d'entrainement.</p>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="/articles" class="btn btn-outline">Tous les articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- Thematiques -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Explorez par thematique</h2>
+    <p class="section-subtitle">Course sur route, trail, ultra-endurance ou triathlon - retrouvez nos guides adaptes a votre pratique.</p>
+    <div class="features-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">🛣️</div>
+        <h3 style="font-size:1rem;">Course sur route</h3>
+        <p>10 km, semi, marathon</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">⛰️</div>
+        <h3 style="font-size:1rem;">Trail running</h3>
+        <p>Sentiers et montagne</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">🏅</div>
+        <h3 style="font-size:1rem;">Ultra-endurance</h3>
+        <p>Ultra-trail et 100 miles</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">🏊</div>
+        <h3 style="font-size:1rem;">Triathlon</h3>
+        <p>Natation, velo, course</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Questions frequentes</h2>
+    <p class="section-subtitle">Les reponses aux questions les plus posees sur la nutrition et l'equipement en course a pied.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Quel gel energetique choisir pour un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Pour un marathon, privilegiez un gel avec un ratio maltodextrine/fructose de 2:1 pour une absorption optimale. La concentration en glucides doit etre entre 20 et 30g par gel. Testez toujours vos gels a l'entrainement avant la course. Notre comparatif complet vous aide a trouver le gel adapte a votre profil.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Faut-il prendre des electrolytes pendant la course ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, surtout pour les efforts de plus d'une heure ou par temps chaud. Le sodium est le mineral le plus important a compenser. Un apport de 300 a 600 mg de sodium par heure est recommande selon l'intensite et la temperature. Les pastilles d'electrolytes ou les boissons enrichies sont les moyens les plus pratiques.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quelle est la difference entre une boisson isotonique et de l'eau ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Une boisson isotonique a la meme concentration en particules que le sang, ce qui permet une absorption plus rapide que l'eau seule. Elle contient des glucides (4-8%) pour l'energie et des mineraux (sodium, potassium) pour compenser les pertes par la sueur. Elle est recommandee pour les efforts de plus de 45 minutes.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Combien de gels prendre pendant un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">La recommandation generale est de 60 a 90g de glucides par heure d'effort intense. Selon la teneur en glucides de vos gels (generalement 20-30g), cela represente 2 a 3 gels par heure. Commencez la prise des le premier tiers de course et espacez regulierement. Accompagnez toujours d'eau, jamais de boisson energetique pour eviter les troubles digestifs.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Les complements alimentaires sont-ils utiles pour la course a pied ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Certains complements ont demontre leur efficacite pour les sports d'endurance : la cafeine ameliore la performance de 2-5%, la beta-alanine retarde la fatigue musculaire, et les BCAA peuvent reduire la fatigue centrale sur ultra. Le fer et la vitamine D sont souvent deficitaires chez les coureurs. Privilegiez une alimentation equilibree et complementez uniquement si un besoin est identifie.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Trouvez le produit ideal pour votre pratique</h2>
+    <p class="section-subtitle">Nos comparatifs independants vous aident a choisir en toute confiance.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Voir les gels energetiques</a>
+      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Voir les electrolytes</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

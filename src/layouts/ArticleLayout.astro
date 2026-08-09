@@ -1,0 +1,127 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  date: string;
+  readTime: string;
+  category: string;
+  ogImage?: string;
+}
+
+const { title, description, canonical, date, readTime, category, ogImage } = Astro.props;
+
+const schemaOrg = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "Running et Trail" },
+  "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
+  "datePublished": date,
+  "dateModified": date
+});
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogImage={ogImage} schema={schemaOrg}>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href="/articles">Articles</a>
+      <span>/</span>
+      <span style="color:var(--primary);"><slot name="breadcrumb" /></span>
+    </nav>
+    <span class="article-card-tag">{category}</span>
+    <h1 style="margin-top:12px;">{title}</h1>
+    <p style="margin-top:12px;font-size:0.9rem;color:var(--text-light-secondary);">Mis a jour le {date} - {readTime} de lecture</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="article-content" style="max-width:800px;margin:0 auto;">
+      <slot />
+    </article>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .article-content {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-dark-secondary);
+  }
+  .article-content h2 {
+    font-size: 1.5rem;
+    margin: 48px 0 16px;
+    color: var(--text-dark);
+  }
+  .article-content h3 {
+    font-size: 1.15rem;
+    margin: 32px 0 12px;
+    color: var(--primary);
+  }
+  .article-content p {
+    margin-bottom: 16px;
+  }
+  .article-content strong {
+    color: var(--text-dark);
+  }
+  .article-content ul, .article-content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  .article-content li {
+    margin-bottom: 8px;
+  }
+  .article-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 16px 24px;
+    margin: 24px 0;
+    background: var(--bg-alt);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+  }
+  .article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  .article-content th {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .article-content td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .article-cta {
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    margin: 48px 0;
+  }
+  .article-cta h3 {
+    color: var(--text-dark) !important;
+    margin: 0 0 12px !important;
+  }
+  .article-cta p {
+    margin-bottom: 20px !important;
+  }
+</style>

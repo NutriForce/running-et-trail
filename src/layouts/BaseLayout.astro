@@ -1,0 +1,174 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: string;
+}
+
+const { title, description, canonical, ogImage, schema } = Astro.props;
+const siteUrl = 'https://running-et-trail.fr';
+const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-default.jpg`;
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={fullCanonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={fullOgImage} />
+  <meta property="og:url" content={fullCanonical} />
+  <meta property="og:site_name" content="Running et Trail" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullOgImage} />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  {schema && <script type="application/ld+json" set:html={schema} />}
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="13" stroke="#E85D2A" stroke-width="2" fill="none"/>
+          <path d="M8 20 L12 8 L16 16 L20 6" stroke="#E85D2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="logo-text">Running <span>&</span> Trail</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="/">Accueil</a>
+        <a href="/comparatifs/gels-energetiques">Gels</a>
+        <a href="/comparatifs/electrolytes">Electrolytes</a>
+        <a href="/comparatifs/boissons-isotoniques">Isotoniques</a>
+        <a href="/articles">Articles</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <span class="logo-text">Running <span>&</span> Trail</span>
+        </a>
+        <p>Guides, comparatifs et conseils pour les coureurs et traileurs. Tests independants et analyses detaillees des meilleurs produits pour l'endurance.</p>
+      </div>
+      <div>
+        <h4>Comparatifs</h4>
+        <ul>
+          <li><a href="/comparatifs/gels-energetiques">Gels energetiques</a></li>
+          <li><a href="/comparatifs/electrolytes">Electrolytes</a></li>
+          <li><a href="/comparatifs/boissons-isotoniques">Boissons isotoniques</a></li>
+          <li><a href="/comparatifs/complements-endurance">Complements endurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/nutrition-marathon">Nutrition marathon</a></li>
+          <li><a href="/articles/choisir-gel-energetique">Choisir son gel</a></li>
+          <li><a href="/articles/debuter-trail">Debuter le trail</a></li>
+          <li><a href="/articles/hydratation-course">Hydratation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="/a-propos">A propos</a></li>
+          <li><a href="/methodologie">Methodologie</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/mentions-legales">Mentions legales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Running et Trail - Tous droits reserves</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      });
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }
+
+    const toggle = document.getElementById('mobile-toggle');
+    const nav = document.getElementById('nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('active');
+        toggle.textContent = isOpen ? '✕' : '☰';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          toggle.textContent = '☰';
+        });
+      });
+    }
+
+    const fadeEls = document.querySelectorAll('.fade-in');
+    if (fadeEls.length && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => observer.observe(el));
+    }
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      if (question) {
+        question.addEventListener('click', () => {
+          const wasActive = item.classList.contains('active');
+          faqItems.forEach(fi => {
+            fi.classList.remove('active');
+            const ans = fi.querySelector('.faq-answer');
+            if (ans) (ans as HTMLElement).style.maxHeight = '';
+          });
+          if (!wasActive) {
+            item.classList.add('active');
+            const answer = item.querySelector('.faq-answer');
+            if (answer) (answer as HTMLElement).style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      }
+    });
+
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href !== '/' && currentPath.startsWith(href)) {
+        link.classList.add('active');
+      } else if (href === '/' && currentPath === '/') {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

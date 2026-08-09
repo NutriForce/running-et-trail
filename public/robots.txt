@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://running-et-trail.fr/sitemap-index.xml
