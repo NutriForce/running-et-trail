@@ -10,16 +10,38 @@ interface Props {
   readTime: string;
   category: string;
   ogImage?: string;
+  author?: string;
+  authorRole?: string;
 }
 
-const { title, description, canonical, date, readTime, category, ogImage } = Astro.props;
+const authors: Record<string, { name: string; role: string; bio: string }> = {
+  "julien-moreau": {
+    name: "Julien Moreau",
+    role: "Ultra-traileur et coach certifie",
+    bio: "Finisher de l'UTMB, CCC et Diagonale des Fous. Coach diplome d'Etat en athletisme, specialise dans la preparation des courses longues distances. 15 ans d'experience en endurance."
+  },
+  "camille-dupont": {
+    name: "Camille Dupont",
+    role: "Marathonienne et nutritionniste du sport",
+    bio: "Record personnel de 2h48 au marathon. Dieteticienne-nutritionniste specialisee dans la nutrition de l'effort. Accompagne des coureurs de tous niveaux depuis 10 ans."
+  },
+  "thomas-lefevre": {
+    name: "Thomas Lefevre",
+    role: "Traileur elite et testeur materiel",
+    bio: "Multiple podiums en trail national (80 km du Mont-Blanc, Grand Raid Reunion). Teste et analyse plus de 200 produits de nutrition sportive par an pour des medias specialises."
+  }
+};
+
+const { title, description, canonical, date, readTime, category, ogImage, author: authorKey, authorRole: authorRoleOverride } = Astro.props;
+
+const author = authorKey && authors[authorKey] ? authors[authorKey] : authors["julien-moreau"];
 
 const schemaOrg = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": title,
   "description": description,
-  "author": { "@type": "Organization", "name": "Running et Trail" },
+  "author": { "@type": "Person", "name": author.name, "jobTitle": author.role },
   "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
   "datePublished": date,
   "dateModified": date
@@ -47,6 +69,15 @@ const schemaOrg = JSON.stringify({
   <div class="container">
     <article class="article-content" style="max-width:800px;margin:0 auto;">
       <slot />
+
+      <div class="author-box">
+        <div class="author-avatar">{author.name.split(' ').map(n => n[0]).join('')}</div>
+        <div class="author-info">
+          <p class="author-name">{author.name}</p>
+          <p class="author-role">{author.role}</p>
+          <p class="author-bio">{author.bio}</p>
+        </div>
+      </div>
     </article>
   </div>
 </section>
@@ -123,5 +154,46 @@ const schemaOrg = JSON.stringify({
   }
   .article-cta p {
     margin-bottom: 20px !important;
+  }
+  .author-box {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 28px;
+    margin-top: 56px;
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+  }
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .author-name {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2px !important;
+    font-size: 1.05rem;
+  }
+  .author-role {
+    color: var(--primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 8px !important;
+  }
+  .author-bio {
+    font-size: 0.92rem;
+    color: var(--text-dark-secondary);
+    line-height: 1.6;
+    margin-bottom: 0 !important;
   }
 </style>

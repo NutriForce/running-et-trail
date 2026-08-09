@@ -4,12 +4,100 @@ import '../../styles/global.css';
 
 const articles = [
   {
+    title: "Programme course a pied debutant : de 0 a 30 min en 8 semaines",
+    description: "Programme progressif pour debuter la course a pied. Plan semaine par semaine, du marche-courre a 30 minutes de course continue.",
+    url: "/articles/programme-course-debutant",
+    category: "Entrainement",
+    readTime: "15 min",
+    emoji: "🏃"
+  },
+  {
+    title: "Comment progresser en course a pied : methodes et entrainement",
+    description: "Les 10 leviers pour progresser en course a pied. Fractionne, sortie longue, recuperation, nutrition et mental.",
+    url: "/articles/comment-progresser-course-a-pied",
+    category: "Entrainement",
+    readTime: "14 min",
+    emoji: "📈"
+  },
+  {
+    title: "Comment bien courir : technique, posture et respiration",
+    description: "Foulee, cadence, posture, respiration : les fondamentaux pour courir efficacement et sans blessure.",
+    url: "/articles/comment-bien-courir",
+    category: "Technique",
+    readTime: "12 min",
+    emoji: "👟"
+  },
+  {
     title: "Nutrition marathon : le guide complet pour performer le jour J",
     description: "Strategie nutritionnelle complete : que manger avant, pendant et apres un marathon. Plan de ravitaillement detaille.",
     url: "/articles/nutrition-marathon",
     category: "Nutrition",
     readTime: "12 min",
-    emoji: "🏃"
+    emoji: "🍽️"
+  },
+  {
+    title: "Que manger avant un marathon : le protocole nutritionnel complet",
+    description: "Surcharge glucidique, dernier repas, petit-dejeuner de course : tout le protocole nutritionnel avant un marathon.",
+    url: "/articles/que-manger-avant-marathon",
+    category: "Nutrition",
+    readTime: "11 min",
+    emoji: "🥗"
+  },
+  {
+    title: "Comment preparer un semi marathon : plan 12 semaines",
+    description: "Plan d'entrainement semi marathon 12 semaines, nutrition et strategie de course. Du debutant au confirme.",
+    url: "/articles/preparer-semi-marathon",
+    category: "Entrainement",
+    readTime: "16 min",
+    emoji: "🏅"
+  },
+  {
+    title: "Combien de km par semaine pour preparer un marathon",
+    description: "Volume d'entrainement ideal pour le marathon selon votre niveau. Regle des 10%, periodisation et gestion du risque.",
+    url: "/articles/combien-km-semaine-marathon",
+    category: "Entrainement",
+    readTime: "12 min",
+    emoji: "📊"
+  },
+  {
+    title: "Entrainement fractionne : guide et seances VMA",
+    description: "Tout sur le fractionne en course a pied. Types de seances, calcul des allures, progression et erreurs a eviter.",
+    url: "/articles/entrainement-fractionne",
+    category: "Entrainement",
+    readTime: "13 min",
+    emoji: "⚡"
+  },
+  {
+    title: "Comment s'ameliorer en course a pied",
+    description: "Principes d'entrainement, seances cles, tests VMA et strategies pour casser vos plateaux de performance.",
+    url: "/articles/ameliorer-course-a-pied",
+    category: "Entrainement",
+    readTime: "13 min",
+    emoji: "🎯"
+  },
+  {
+    title: "Hydratation en course a pied : combien boire et quand",
+    description: "Guide complet de l'hydratation. Taux de sudation, sodium, protocoles par distance et risque d'hyponatremie.",
+    url: "/articles/hydratation-course-a-pied",
+    category: "Nutrition",
+    readTime: "11 min",
+    emoji: "💧"
+  },
+  {
+    title: "Comment faire une boisson isotonique maison : 5 recettes",
+    description: "5 recettes de boissons isotoniques maison pour le sport. Ingredients, proportions et conseils de conservation.",
+    url: "/articles/boisson-isotonique-maison",
+    category: "Nutrition",
+    readTime: "10 min",
+    emoji: "🧃"
+  },
+  {
+    title: "Quand prendre un gel energetique : timing optimal",
+    description: "Quand et comment prendre un gel energetique selon la distance. Frequence, entrainement digestif et alternatives.",
+    url: "/articles/quand-prendre-gel-energetique",
+    category: "Nutrition",
+    readTime: "9 min",
+    emoji: "⏱️"
   },
   {
     title: "Comment choisir son gel energetique en 2026",
@@ -17,15 +105,47 @@ const articles = [
     url: "/articles/choisir-gel-energetique",
     category: "Guide",
     readTime: "10 min",
-    emoji: "⚡"
+    emoji: "🔍"
+  },
+  {
+    title: "Est-ce que la course a pied muscle ?",
+    description: "Quels muscles la course a pied sollicite, comment le corps s'adapte et pourquoi le renforcement est essentiel.",
+    url: "/articles/course-a-pied-muscle",
+    category: "Sante",
+    readTime: "10 min",
+    emoji: "💪"
+  },
+  {
+    title: "Eviter les blessures en course a pied : guide complet",
+    description: "Les 8 blessures les plus courantes en running, leurs causes et les strategies de prevention efficaces.",
+    url: "/articles/eviter-blessures-course",
+    category: "Sante",
+    readTime: "14 min",
+    emoji: "🛡️"
+  },
+  {
+    title: "Recuperation apres marathon : semaine par semaine",
+    description: "Protocole de recuperation post-marathon jour par jour. Nutrition, reprise progressive et signaux d'alerte.",
+    url: "/articles/recuperation-apres-marathon",
+    category: "Recuperation",
+    readTime: "12 min",
+    emoji: "🔄"
   },
   {
     title: "Debuter le trail running : equipement, nutrition et entrainement",
     description: "Guide complet pour passer de la route aux sentiers. Chaussures, sac, plan d'entrainement et erreurs a eviter.",
     url: "/articles/debuter-trail",
-    category: "Debutant",
+    category: "Trail",
     readTime: "14 min",
     emoji: "🏔️"
+  },
+  {
+    title: "Preparer son premier trail : guide complet",
+    description: "Choisir sa course, s'equiper, s'entrainer et gerer le jour J. Tout pour reussir son premier trail running.",
+    url: "/articles/preparer-premier-trail",
+    category: "Trail",
+    readTime: "15 min",
+    emoji: "🌲"
   }
 ];
 ---
