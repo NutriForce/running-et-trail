@@ -61,15 +61,10 @@ const schemaOrg = JSON.stringify({
         <h3>Complements endurance</h3>
         <p>BCAA, creatine, beta-alanine, cafeine - quels complements fonctionnent vraiment pour les sports d'endurance ?</p>
       </a>
-      <a href="/comparatifs/chaussures-running" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">👟</div>
-        <h3>Chaussures running</h3>
-        <p>Selection des meilleures chaussures de course par profil : route, trail, competitions et entrainement quotidien.</p>
-      </a>
-      <a href="/comparatifs/montres-gps" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">⌚</div>
-        <h3>Montres GPS</h3>
-        <p>Garmin, Coros, Polar, Suunto - comparatif des montres GPS pour le running, le trail et le triathlon.</p>
+      <a href="/articles" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
+        <div class="feature-icon">📚</div>
+        <h3>Guides et articles</h3>
+        <p>Plans d'entrainement, nutrition, technique de course et conseils pratiques pour tous les niveaux.</p>
       </a>
     </div>
   </div>
@@ -101,34 +96,34 @@ const schemaOrg = JSON.stringify({
     <h2 class="section-title">Derniers articles</h2>
     <p class="section-subtitle">Guides pratiques, conseils nutrition et entrainement pour progresser en course a pied et trail.</p>
     <div class="articles-grid">
-      <a href="/articles/nutrition-marathon" class="article-card fade-in">
+      <a href="/articles/plan-entrainement-marathon" class="article-card fade-in">
         <div style="width:100%;height:200px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:3rem;">🏅</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Entrainement</span>
+          <h3>Plan entrainement marathon : 16 semaines pour performer</h3>
+          <p>Plan detaille semaine par semaine pour preparer votre marathon. Objectifs sub-4h et sub-3h30.</p>
+        </div>
+      </a>
+      <a href="/articles/programme-course-debutant" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
           <span style="font-size:3rem;">🏃</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Entrainement</span>
+          <h3>Programme course a pied debutant : 0 a 30 min en 8 semaines</h3>
+          <p>Plan progressif pour debuter la course a pied. Du marche-courre a 30 minutes de course continue.</p>
+        </div>
+      </a>
+      <a href="/articles/nutrition-marathon" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:3rem;">🍽️</span>
         </div>
         <div class="article-card-content">
           <span class="article-card-tag">Nutrition</span>
           <h3>Nutrition marathon : le guide complet pour performer</h3>
-          <p>Strategie nutritionnelle avant, pendant et apres un marathon. Glucides, hydratation et supplementation.</p>
-        </div>
-      </a>
-      <a href="/articles/choisir-gel-energetique" class="article-card fade-in">
-        <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:3rem;">⚡</span>
-        </div>
-        <div class="article-card-content">
-          <span class="article-card-tag">Guide</span>
-          <h3>Comment choisir son gel energetique en 2025</h3>
-          <p>Maltodextrine, fructose, cafeine, BCAA - comment lire les etiquettes et trouver le gel qui vous convient.</p>
-        </div>
-      </a>
-      <a href="/articles/debuter-trail" class="article-card fade-in">
-        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:3rem;">🏔️</span>
-        </div>
-        <div class="article-card-content">
-          <span class="article-card-tag">Debutant</span>
-          <h3>Debuter le trail : equipement, nutrition et entrainement</h3>
-          <p>Tout ce qu'il faut savoir pour se lancer dans le trail running : choix des chaussures, nutrition et plan d'entrainement.</p>
+          <p>Strategie nutritionnelle avant, pendant et apres un marathon. Glucides, hydratation et plan de ravitaillement.</p>
         </div>
       </a>
     </div>
@@ -177,31 +172,37 @@ const schemaOrg = JSON.stringify({
       <div class="faq-item">
         <button class="faq-question">Quel gel energetique choisir pour un marathon ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Pour un marathon, privilegiez un gel avec un ratio maltodextrine/fructose de 2:1 pour une absorption optimale. La concentration en glucides doit etre entre 20 et 30g par gel. Testez toujours vos gels a l'entrainement avant la course. Notre comparatif complet vous aide a trouver le gel adapte a votre profil.</div>
+          <div class="faq-answer-inner">Pour un marathon, privilegiez un gel avec un ratio maltodextrine/fructose de 2:1 pour une absorption optimale. La concentration en glucides doit etre entre 20 et 30g par gel. Testez toujours vos gels a l'entrainement avant la course. Consultez notre <a href="/comparatifs/gels-energetiques">comparatif gels energetiques</a> et notre guide <a href="/articles/quand-prendre-gel-energetique">quand prendre un gel</a>.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment debuter la course a pied ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Commencez par un programme progressif alternant marche et course pendant 8 semaines. Trois seances par semaine suffisent, avec au moins un jour de repos entre chaque sortie. L'allure doit etre tres lente : vous devez pouvoir parler sans etre essouffle. Consultez notre <a href="/articles/programme-course-debutant">programme debutant complet</a>.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Que manger avant un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">La surcharge glucidique commence 3 jours avant (8-10 g de glucides par kg de poids). Le dernier repas se prend 3 heures avant le depart : pain blanc, confiture, miel et 500 ml d'eau. 30 minutes avant, un dernier gel de 20-30 g de glucides optimise la glycemie. Notre <a href="/articles/que-manger-avant-marathon">guide nutrition pre-marathon</a> detaille chaque etape.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Combien de km par semaine pour preparer un marathon ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Un debutant vise 40-50 km/semaine, un coureur intermediaire 60-80 km et un confirme 80-100 km. L'important est d'augmenter progressivement (maximum 10% par semaine) et de respecter la repartition 80% endurance facile, 20% intensite. Retrouvez tous les details dans notre <a href="/articles/combien-km-semaine-marathon">guide volume marathon</a>.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">La course a pied fait-elle maigrir ?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Oui, la course a pied brule 400 a 800 kcal par heure selon l'allure et le poids. Mais l'alimentation reste le facteur numero 1 : sans deficit calorique, pas de perte de poids. Combiner endurance fondamentale et seances plus intenses (fractionne) optimise la depense energetique. Notre <a href="/articles/courir-pour-maigrir">guide course et perte de poids</a> explique tout.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Faut-il prendre des electrolytes pendant la course ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Oui, surtout pour les efforts de plus d'une heure ou par temps chaud. Le sodium est le mineral le plus important a compenser. Un apport de 300 a 600 mg de sodium par heure est recommande selon l'intensite et la temperature. Les pastilles d'electrolytes ou les boissons enrichies sont les moyens les plus pratiques.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Quelle est la difference entre une boisson isotonique et de l'eau ?</button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Une boisson isotonique a la meme concentration en particules que le sang, ce qui permet une absorption plus rapide que l'eau seule. Elle contient des glucides (4-8%) pour l'energie et des mineraux (sodium, potassium) pour compenser les pertes par la sueur. Elle est recommandee pour les efforts de plus de 45 minutes.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Combien de gels prendre pendant un marathon ?</button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">La recommandation generale est de 60 a 90g de glucides par heure d'effort intense. Selon la teneur en glucides de vos gels (generalement 20-30g), cela represente 2 a 3 gels par heure. Commencez la prise des le premier tiers de course et espacez regulierement. Accompagnez toujours d'eau, jamais de boisson energetique pour eviter les troubles digestifs.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Les complements alimentaires sont-ils utiles pour la course a pied ?</button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Certains complements ont demontre leur efficacite pour les sports d'endurance : la cafeine ameliore la performance de 2-5%, la beta-alanine retarde la fatigue musculaire, et les BCAA peuvent reduire la fatigue centrale sur ultra. Le fer et la vitamine D sont souvent deficitaires chez les coureurs. Privilegiez une alimentation equilibree et complementez uniquement si un besoin est identifie.</div>
+          <div class="faq-answer-inner">Oui, surtout pour les efforts de plus d'une heure ou par temps chaud. Le sodium est le mineral le plus important : 300 a 600 mg par heure selon l'intensite. Les pastilles d'electrolytes ou les boissons isotoniques sont les moyens les plus pratiques. Notre <a href="/comparatifs/electrolytes">comparatif electrolytes</a> vous aide a choisir.</div>
         </div>
       </div>
     </div>
