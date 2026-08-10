@@ -170,7 +170,9 @@ img { max-width:100%; height:auto; display:block; }
 .footer li { margin-bottom:8px; }
 .footer a { color:var(--text-light-secondary); font-size:0.9rem; transition:color var(--transition); }
 .footer a:hover { color:var(--primary-light); }
-.footer-bottom { max-width:var(--container); margin:0 auto; padding:24px; border-top:1px solid rgba(255,255,255,0.06); text-align:center; font-size:0.85rem; }
+.footer-bottom { max-width:var(--container); margin:0 auto; padding:24px; border-top:1px solid rgba(255,255,255,0.06); text-align:center; font-size:0.85rem; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+.footer-social { color:var(--text-light-secondary); transition:color var(--transition); display:inline-flex; }
+.footer-social:hover { color:#1877F2; }
 
 /* Animations */
 .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease,transform 0.6s ease; }
