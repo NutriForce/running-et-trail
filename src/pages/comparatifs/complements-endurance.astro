@@ -34,7 +34,6 @@ const products = [
       "Fabriqué en France, testé en laboratoire",
       "<strong>4,9/5</strong> sur 67 avis vérifiés"
     ],
-    testUrl: "/tests/nutriforce-pack-endurance",
     productUrl: "https://nutriforce.fr/",
     featured: true
   },
@@ -55,7 +54,6 @@ const products = [
       "Marque française transparente sur les dosages",
       "<strong>4,3/5</strong> sur 345 avis non vérifiés"
     ],
-    testUrl: "/tests/nutripure-bcaa-endurance",
     productUrl: "https://www.nutripure.fr/",
     featured: false
   },
@@ -76,7 +74,6 @@ const products = [
       "Excellent rapport qualité-prix",
       "<strong>4,1/5</strong> sur 1 230 avis non vérifiés"
     ],
-    testUrl: "/tests/bulk-beta-alanine",
     productUrl: "https://www.bulk.com/",
     featured: false
   },
@@ -97,7 +94,6 @@ const products = [
       "Le complément le plus étudié scientifiquement",
       "<strong>4,4/5</strong> sur 3 670 avis non vérifiés"
     ],
-    testUrl: "/tests/myprotein-cafeine",
     productUrl: "https://www.myprotein.fr/",
     featured: false
   },
@@ -118,7 +114,6 @@ const products = [
       "Essentiel pour les coureuses (60% de déficience)",
       "<strong>4,2/5</strong> sur 189 avis non vérifiés"
     ],
-    testUrl: "/tests/nutrico-fer-bisglycinate",
     productUrl: "https://nutriandco.com/",
     featured: false
   },
@@ -139,7 +134,6 @@ const products = [
       "Particulièrement utile après 35 ans",
       "<strong>4,0/5</strong> sur 156 avis non vérifiés"
     ],
-    testUrl: "/tests/supersmart-coq10",
     productUrl: "https://www.supersmart.com/",
     featured: false
   },
@@ -160,7 +154,6 @@ const products = [
       "Utile pour les séances de côtes et le fractionné",
       "<strong>4,5/5</strong> sur 890 avis non vérifiés"
     ],
-    testUrl: "/tests/nutrimuscle-creatine",
     productUrl: "https://www.nutrimuscle.com/",
     featured: false
   },
@@ -181,7 +174,6 @@ const products = [
       "À prendre d'octobre à avril minimum",
       "<strong>4,3/5</strong> sur 2 140 avis non vérifiés"
     ],
-    testUrl: "/tests/solgar-vitamine-d3",
     productUrl: "https://www.solgar.fr/",
     featured: false
   },
@@ -202,7 +194,6 @@ const products = [
       "Efficace sur efforts de 30 min à 2h",
       "<strong>4,0/5</strong> sur 567 avis non vérifiés"
     ],
-    testUrl: "/tests/hsn-citrulline-malate",
     productUrl: "https://www.hsnstore.fr/",
     featured: false
   },
@@ -223,7 +214,6 @@ const products = [
       "Certifié IFOS 5 étoiles (pureté maximale)",
       "<strong>4,4/5</strong> sur 4 230 avis non vérifiés"
     ],
-    testUrl: "/tests/nordic-naturals-omega3",
     productUrl: "https://www.nordicnaturals.com/",
     featured: false
   }
@@ -242,7 +232,7 @@ const products = [
     <nav class="breadcrumb">
       <a href="/">Accueil</a>
       <span>/</span>
-      <a href="/comparatifs/complements-endurance">Comparatifs</a>
+      <a href="/comparatifs">Comparatifs</a>
       <span>/</span>
       <span style="color:var(--primary);">Compléments endurance</span>
     </nav>
@@ -286,7 +276,6 @@ const products = [
           keySpec={p.keySpec}
           keySpecLabel={p.keySpecLabel}
           bullets={p.bullets}
-          testUrl={p.testUrl}
           productUrl={p.productUrl}
           featured={p.featured}
         />

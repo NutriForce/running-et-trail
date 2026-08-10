@@ -34,7 +34,6 @@ const products = [
       "Fabriqué en France, 4 saveurs naturelles",
       "<strong>4,8/5</strong> sur 76 avis vérifiés"
     ],
-    testUrl: "/tests/nutriforce-boisson-isotonique",
     productUrl: "https://nutriforce.fr/",
     featured: true
   },
@@ -54,7 +53,6 @@ const products = [
       "Osmolarité basse malgré haute concentration glucidique",
       "<strong>4,3/5</strong> sur 612 avis non vérifiés"
     ],
-    testUrl: "/tests/maurten-drink-mix-320",
     productUrl: "https://www.maurten.com/",
     featured: false
   },
@@ -75,7 +73,6 @@ const products = [
       "Certifié Informed Sport",
       "<strong>4,2/5</strong> sur 1 450 avis non vérifiés"
     ],
-    testUrl: "/tests/sis-go-electrolyte-powder",
     productUrl: "https://www.scienceinsport.com/",
     featured: false
   },
@@ -96,7 +93,6 @@ const products = [
       "Marque française historique, 35+ ans",
       "<strong>4,1/5</strong> sur 389 avis non vérifiés"
     ],
-    testUrl: "/tests/overstims-hydrixir-longue-distance",
     productUrl: "https://www.overstims.com/",
     featured: false
   },
@@ -117,7 +113,6 @@ const products = [
       "Marque française, dosages conformes ACSM",
       "<strong>4,0/5</strong> sur 156 avis non vérifiés"
     ],
-    testUrl: "/tests/nutrico-boisson-isotonique",
     productUrl: "https://nutriandco.com/",
     featured: false
   },
@@ -138,7 +133,6 @@ const products = [
       "Pas besoin de gel supplémentaire",
       "<strong>4,4/5</strong> sur 2 340 avis non vérifiés"
     ],
-    testUrl: "/tests/tailwind-endurance-fuel",
     productUrl: "https://www.tailwindnutrition.com/",
     featured: false
   },
@@ -159,7 +153,6 @@ const products = [
       "Formule basique mais efficace",
       "<strong>3,9/5</strong> sur 1 870 avis non vérifiés"
     ],
-    testUrl: "/tests/isostar-hydrate-perform",
     productUrl: "https://www.isostar.com/",
     featured: false
   },
@@ -180,7 +173,6 @@ const products = [
       "Saveurs légères et agréables",
       "<strong>4,1/5</strong> sur 780 avis non vérifiés"
     ],
-    testUrl: "/tests/high5-energy-drink",
     productUrl: "https://highfive.co.uk/",
     featured: false
   },
@@ -201,7 +193,6 @@ const products = [
       "Formule correcte pour débuter",
       "<strong>3,8/5</strong> sur 3 450 avis non vérifiés"
     ],
-    testUrl: "/tests/aptonia-iso-plus",
     productUrl: "https://www.decathlon.fr/",
     featured: false
   },
@@ -222,7 +213,6 @@ const products = [
       "Marque historique de la nutrition sportive",
       "<strong>3,9/5</strong> sur 540 avis non vérifiés"
     ],
-    testUrl: "/tests/powerbar-isoactive",
     productUrl: "https://www.powerbar.com/",
     featured: false
   }
@@ -241,7 +231,7 @@ const products = [
     <nav class="breadcrumb">
       <a href="/">Accueil</a>
       <span>/</span>
-      <a href="/comparatifs/boissons-isotoniques">Comparatifs</a>
+      <a href="/comparatifs">Comparatifs</a>
       <span>/</span>
       <span style="color:var(--primary);">Boissons isotoniques</span>
     </nav>
@@ -287,7 +277,6 @@ const products = [
           keySpec={p.keySpec}
           keySpecLabel={p.keySpecLabel}
           bullets={p.bullets}
-          testUrl={p.testUrl}
           productUrl={p.productUrl}
           featured={p.featured}
         />

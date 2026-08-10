@@ -34,7 +34,6 @@ const products = [
       "Fabriqué en France, testé en laboratoire",
       "<strong>4,8/5</strong> sur 89 avis vérifiés"
     ],
-    testUrl: "/tests/nutriforce-electrolytes",
     productUrl: "https://nutriforce.fr/product/electrolytes-en-poudre/",
     featured: true
   },
@@ -54,7 +53,6 @@ const products = [
       "Développé à partir de tests de sueur individuels",
       "<strong>4,3/5</strong> sur 478 avis non vérifiés"
     ],
-    testUrl: "/tests/precision-hydration-ph1500",
     productUrl: "https://www.precisionfuelandhydration.com/",
     featured: false
   },
@@ -75,7 +73,6 @@ const products = [
       "Large gamme de saveurs fruitées",
       "<strong>4,2/5</strong> sur 1 830 avis non vérifiés"
     ],
-    testUrl: "/tests/nuun-sport",
     productUrl: "https://nuunlife.com/",
     featured: false
   },
@@ -96,7 +93,6 @@ const products = [
       "Marque française, clean label",
       "<strong>4,1/5</strong> sur 245 avis non vérifiés"
     ],
-    testUrl: "/tests/nutrico-electrolytes",
     productUrl: "https://nutriandco.com/",
     featured: false
   },
@@ -117,7 +113,6 @@ const products = [
       "Certifié Informed Sport",
       "<strong>4,3/5</strong> sur 920 avis non vérifiés"
     ],
-    testUrl: "/tests/sis-go-electrolyte",
     productUrl: "https://www.scienceinsport.com/",
     featured: false
   },
@@ -138,7 +133,6 @@ const products = [
       "Bonne dissolution, goût agréable",
       "<strong>4,0/5</strong> sur 134 avis non vérifiés"
     ],
-    testUrl: "/tests/enako-electrolytes",
     productUrl: "https://enako.fr/",
     featured: false
   },
@@ -159,7 +153,6 @@ const products = [
       "Fabrication française",
       "<strong>3,9/5</strong> sur 98 avis non vérifiés"
     ],
-    testUrl: "/tests/punch-power-speedox",
     productUrl: "https://www.punchpower.com/",
     featured: false
   },
@@ -180,7 +173,6 @@ const products = [
       "Prix élevé, réservé aux courses importantes",
       "<strong>4,1/5</strong> sur 356 avis non vérifiés"
     ],
-    testUrl: "/tests/maurten-drink-mix-160",
     productUrl: "https://www.maurten.com/",
     featured: false
   },
@@ -201,7 +193,6 @@ const products = [
       "Plusieurs parfums disponibles",
       "<strong>4,0/5</strong> sur 267 avis non vérifiés"
     ],
-    testUrl: "/tests/overstims-hydrixir",
     productUrl: "https://www.overstims.com/",
     featured: false
   },
@@ -222,7 +213,6 @@ const products = [
       "Saveurs classiques (citron, fruits rouges)",
       "<strong>3,8/5</strong> sur 412 avis non vérifiés"
     ],
-    testUrl: "/tests/ta-energy-hydration-tabs",
     productUrl: "https://taenergy.co/",
     featured: false
   }
@@ -241,7 +231,7 @@ const products = [
     <nav class="breadcrumb">
       <a href="/">Accueil</a>
       <span>/</span>
-      <a href="/comparatifs/electrolytes">Comparatifs</a>
+      <a href="/comparatifs">Comparatifs</a>
       <span>/</span>
       <span style="color:var(--primary);">Électrolytes</span>
     </nav>
@@ -286,7 +276,6 @@ const products = [
           keySpec={p.keySpec}
           keySpecLabel={p.keySpecLabel}
           bullets={p.bullets}
-          testUrl={p.testUrl}
           productUrl={p.productUrl}
           featured={p.featured}
         />
