@@ -2,15 +2,43 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 
-const athleteImages: Record<string, string> = {
-  "kilian-jornet": "/images/athletes/kilian-jornet.webp",
-  "francois-dhaene": "/images/athletes/francois-dhaene.webp",
-  "xavier-thevenard": "/images/athletes/xavier-thevenard.webp",
-  "courtney-dauwalter": "/images/athletes/courtney-dauwalter.webp",
-  "jim-walmsley": "/images/athletes/jim-walmsley.webp",
-  "mathieu-blanchard": "/images/athletes/mathieu-blanchard.webp",
-  "nathalie-mauclair": "/images/athletes/nathalie-mauclair.webp",
-  "martin-kern": "/images/athletes/martin-kern.webp",
+const articleImages: Record<string, string> = {
+  "programme-course-debutant": "/images/articles/depart-marathon-vue-aerienne.webp",
+  "comment-progresser-course-a-pied": "/images/articles/comment-progresser-course-a-pied.webp",
+  "comment-bien-courir": "/images/articles/coureur-foret-automne.webp",
+  "nutrition-marathon": "/images/articles/nutrition-marathon.webp",
+  "que-manger-avant-marathon": "/images/articles/que-manger-avant-marathon.webp",
+  "preparer-semi-marathon": "/images/articles/preparer-semi-marathon.webp",
+  "combien-km-semaine-marathon": "/images/articles/combien-km-semaine-marathon.webp",
+  "entrainement-fractionne": "/images/articles/entrainement-fractionne.webp",
+  "ameliorer-course-a-pied": "/images/articles/ameliorer-course-a-pied.webp",
+  "hydratation-course-a-pied": "/images/articles/coureuse-hydratation-route-cotiere.webp",
+  "boisson-isotonique-maison": "/images/articles/remplissage-flasque-ruisseau.webp",
+  "quand-prendre-gel-energetique": "/images/articles/mains-ouverture-sachet-course.webp",
+  "choisir-gel-energetique": "/images/articles/materiel-trail-flat-lay.webp",
+  "course-a-pied-muscle": "/images/articles/course-a-pied-muscle.webp",
+  "eviter-blessures-course": "/images/articles/eviter-blessures-course.webp",
+  "recuperation-apres-marathon": "/images/articles/recuperation-apres-marathon.webp",
+  "debuter-trail": "/images/articles/groupe-trail-brume-alpine.webp",
+  "preparer-premier-trail": "/images/articles/trail-crete-montagne-lever-soleil.webp",
+  "plan-entrainement-marathon": "/images/articles/plan-entrainement-marathon.webp",
+  "plan-entrainement-10-km": "/images/articles/plan-entrainement-10-km.webp",
+  "courir-tous-les-jours": "/images/articles/courir-tous-les-jours.webp",
+  "courir-sous-la-pluie": "/images/articles/courir-sous-la-pluie.webp",
+  "courir-apres-manger": "/images/articles/courir-apres-manger.webp",
+  "courir-pour-maigrir": "/images/articles/courir-pour-maigrir.webp",
+  "courir-en-hiver": "/images/articles/courir-en-hiver.webp",
+  "courir-le-matin-a-jeun": "/images/articles/courir-le-matin-a-jeun.webp",
+  "douleur-genou-course-a-pied": "/images/articles/douleur-genou-course-a-pied.webp",
+  "bienfaits-course-a-pied": "/images/articles/bienfaits-course-a-pied.webp",
+  "kilian-jornet-portrait": "/images/athletes/kilian-jornet.webp",
+  "francois-dhaene-portrait": "/images/athletes/francois-dhaene.webp",
+  "xavier-thevenard-portrait": "/images/athletes/xavier-thevenard.webp",
+  "courtney-dauwalter-portrait": "/images/athletes/courtney-dauwalter.webp",
+  "jim-walmsley-portrait": "/images/athletes/jim-walmsley.webp",
+  "mathieu-blanchard-portrait": "/images/athletes/mathieu-blanchard.webp",
+  "martin-kern-portrait": "/images/athletes/martin-kern.webp",
+  "nathalie-mauclair-portrait": "/images/athletes/nathalie-mauclair.webp",
 };
 
 const articles = [
@@ -291,17 +319,11 @@ const articles = [
   <div class="container">
     <div class="articles-grid">
       {articles.map(a => {
-        const slug = a.url.replace('/articles/', '').replace('-portrait', '');
-        const athleteImg = athleteImages[slug];
+        const slug = a.url.replace('/articles/', '');
+        const img = articleImages[slug];
         return (
         <a href={a.url} class="article-card fade-in">
-          {athleteImg ? (
-            <img src={athleteImg} alt={a.title} style="width:100%;height:200px;object-fit:cover;" loading="lazy" />
-          ) : (
-            <div style={`width:100%;height:200px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;`}>
-              <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">{a.category}</span>
-            </div>
-          )}
+          <img src={img} alt={a.title} style="width:100%;height:200px;object-fit:cover;" loading="lazy" />
           <div class="article-card-content">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
               <span class="article-card-tag">{a.category}</span>
