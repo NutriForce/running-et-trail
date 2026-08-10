@@ -7,11 +7,11 @@ const schemaOrg = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Comparatif des meilleures boissons isotoniques 2026",
-  "description": "Top 10 des meilleures boissons isotoniques pour la course a pied et le trail. Osmolarite, glucides, mineraux et prix compares.",
+  "description": "Top 10 des meilleures boissons isotoniques pour la course à pied et le trail. Osmolarité, glucides, minéraux et prix comparés.",
   "author": { "@type": "Organization", "name": "Running et Trail" },
   "publisher": { "@type": "Organization", "name": "Running et Trail", "url": "https://running-et-trail.fr" },
   "datePublished": "2026-08-09",
-  "dateModified": "2026-08-09"
+  "dateModified": "2026-08-10"
 });
 
 const products = [
@@ -27,10 +27,12 @@ const products = [
     keySpec: "32 g",
     bullets: [
       "<strong>32 g de glucides</strong> (maltodextrine + fructose ratio 2:1)",
-      "Electrolytes complets : sodium, potassium, magnesium",
+      "Électrolytes complets : sodium, potassium, magnésium",
       "Enrichi en <strong>L-glutamine</strong> et vitamines B",
-      "Osmolarite optimisee (280 mOsm/L), absorption rapide",
-      "Fabrique en France, 4 saveurs naturelles"
+      "Utilisé par les athlètes d'élite",
+      "Osmolarité optimisée (280 mOsm/L), absorption rapide",
+      "Fabriqué en France, 4 saveurs naturelles",
+      "<strong>4,8/5</strong> sur 76 avis vérifiés"
     ],
     testUrl: "/tests/nutriforce-boisson-isotonique",
     productUrl: "https://nutriforce.fr/",
@@ -48,9 +50,9 @@ const products = [
     keySpec: "80 g",
     bullets: [
       "<strong>80 g de glucides</strong> par dose (hydrogel)",
-      "Technologie hydrogel brevetee, zero troubles digestifs",
-      "Osmolarite basse malgre haute concentration glucidique",
-      "Reference chez les marathoniens d'elite"
+      "Technologie hydrogel pour réduire les troubles digestifs",
+      "Osmolarité basse malgré haute concentration glucidique",
+      "<strong>4,3/5</strong> sur 612 avis non vérifiés"
     ],
     testUrl: "/tests/maurten-drink-mix-320",
     productUrl: "https://www.maurten.com/",
@@ -68,9 +70,10 @@ const products = [
     keySpec: "36 g",
     bullets: [
       "<strong>36 g de glucides</strong> + sodium et potassium",
-      "Osmolarite isotonique optimisee",
+      "Osmolarité isotonique optimisée",
       "Large gamme de saveurs (6+)",
-      "Certifie Informed Sport, utilise en pro"
+      "Certifié Informed Sport",
+      "<strong>4,2/5</strong> sur 1 450 avis non vérifiés"
     ],
     testUrl: "/tests/sis-go-electrolyte-powder",
     productUrl: "https://www.scienceinsport.com/",
@@ -88,9 +91,10 @@ const products = [
     keySpec: "30 g",
     bullets: [
       "<strong>30 g de glucides</strong> + BCAA + antioxydants",
-      "Formule specifique efforts longs (3h+)",
-      "Vitamines C, E et B, magnesium, sodium",
-      "Marque francaise historique, 35+ ans"
+      "Formule spécifique efforts longs (3h+)",
+      "Vitamines C, E et B, magnésium, sodium",
+      "Marque française historique, 35+ ans",
+      "<strong>4,1/5</strong> sur 389 avis non vérifiés"
     ],
     testUrl: "/tests/overstims-hydrixir-longue-distance",
     productUrl: "https://www.overstims.com/",
@@ -99,7 +103,7 @@ const products = [
   {
     rank: 5,
     brand: "Nutri&Co",
-    name: "Boisson Energetique Isotonique",
+    name: "Boisson Énergétique Isotonique",
     image: "/images/products/nutrico-isotonique.webp",
     score: 8.3,
     price: "24,90 €",
@@ -108,9 +112,10 @@ const products = [
     keySpec: "28 g",
     bullets: [
       "<strong>28 g de glucides</strong> (cluster dextrine + fructose)",
-      "4 electrolytes : sodium, potassium, magnesium, zinc",
+      "4 électrolytes : sodium, potassium, magnésium, zinc",
       "Formule clean label, sans colorant ni conservateur",
-      "Marque francaise, dosages conformes ACSM"
+      "Marque française, dosages conformes ACSM",
+      "<strong>4,0/5</strong> sur 156 avis non vérifiés"
     ],
     testUrl: "/tests/nutrico-boisson-isotonique",
     productUrl: "https://nutriandco.com/",
@@ -127,10 +132,11 @@ const products = [
     keySpecLabel: "Glucides",
     keySpec: "25 g",
     bullets: [
-      "<strong>25 g de glucides</strong> (dextrose) + electrolytes par dose",
+      "<strong>25 g de glucides</strong> (dextrose) + électrolytes par dose",
       "Formule tout-en-un : calories + hydratation",
-      "Tres utilise en ultra-trail americain",
-      "Pas besoin de gel supplementaire"
+      "Très populaire en ultra-trail",
+      "Pas besoin de gel supplémentaire",
+      "<strong>4,4/5</strong> sur 2 340 avis non vérifiés"
     ],
     testUrl: "/tests/tailwind-endurance-fuel",
     productUrl: "https://www.tailwindnutrition.com/",
@@ -148,9 +154,10 @@ const products = [
     keySpec: "30 g",
     bullets: [
       "<strong>30 g de glucides</strong> + sodium, potassium",
-      "Tres bon rapport qualite-prix, accessible",
+      "Très bon rapport qualité-prix, accessible",
       "Disponible en grande surface",
-      "Formule basique mais efficace"
+      "Formule basique mais efficace",
+      "<strong>3,9/5</strong> sur 1 870 avis non vérifiés"
     ],
     testUrl: "/tests/isostar-hydrate-perform",
     productUrl: "https://www.isostar.com/",
@@ -168,9 +175,10 @@ const products = [
     keySpec: "38 g",
     bullets: [
       "<strong>38 g de glucides</strong> (fructose + maltodextrine)",
-      "Osmolarite isotonique, bonne digestibilite",
-      "Format economique en pot de 1 kg",
-      "Saveurs legeres et agreables"
+      "Osmolarité isotonique, bonne digestibilité",
+      "Format économique en pot de 1 kg",
+      "Saveurs légères et agréables",
+      "<strong>4,1/5</strong> sur 780 avis non vérifiés"
     ],
     testUrl: "/tests/high5-energy-drink",
     productUrl: "https://highfive.co.uk/",
@@ -188,9 +196,10 @@ const products = [
     keySpec: "25 g",
     bullets: [
       "<strong>25 g de glucides</strong> + sodium, vitamines B1 B6",
-      "Prix imbattable, accessible a tous",
+      "Prix imbattable, accessible à tous",
       "Disponible dans tous les magasins Decathlon",
-      "Formule correcte pour debuter"
+      "Formule correcte pour débuter",
+      "<strong>3,8/5</strong> sur 3 450 avis non vérifiés"
     ],
     testUrl: "/tests/aptonia-iso-plus",
     productUrl: "https://www.decathlon.fr/",
@@ -208,9 +217,10 @@ const products = [
     keySpec: "31 g",
     bullets: [
       "<strong>31 g de glucides</strong> (C2MAX dual source)",
-      "5 electrolytes, vitamine C",
-      "Technologie C2MAX pour absorption optimisee",
-      "Marque historique de la nutrition sportive"
+      "5 électrolytes, vitamine C",
+      "Technologie C2MAX pour absorption optimisée",
+      "Marque historique de la nutrition sportive",
+      "<strong>3,9/5</strong> sur 540 avis non vérifiés"
     ],
     testUrl: "/tests/powerbar-isoactive",
     productUrl: "https://www.powerbar.com/",
@@ -221,7 +231,7 @@ const products = [
 
 <BaseLayout
   title="Meilleure Boisson Isotonique 2026 - Comparatif Top 10 Running et Trail"
-  description="Decouvrez notre top 10 des meilleures boissons isotoniques pour la course a pied en 2026. Osmolarite, glucides, electrolytes et prix compares dans notre comparatif independant."
+  description="Découvrez notre top 10 des meilleures boissons isotoniques pour la course à pied en 2026. Osmolarité, glucides, électrolytes et prix comparés dans notre comparatif indépendant."
   canonical="/comparatifs/boissons-isotoniques"
   schema={schemaOrg}
 >
@@ -236,7 +246,7 @@ const products = [
       <span style="color:var(--primary);">Boissons isotoniques</span>
     </nav>
     <h1>Comparatif des meilleures boissons isotoniques 2026</h1>
-    <p>Top 10 des boissons isotoniques testees pour le marathon, le trail et la course a pied. Osmolarite, glucides, electrolytes et prix compares dans notre classement independant.</p>
+    <p>Top 10 des boissons isotoniques testées pour le marathon, le trail et la course à pied. Osmolarité, glucides, électrolytes et prix comparés dans notre classement indépendant.</p>
   </div>
 </section>
 
@@ -244,22 +254,22 @@ const products = [
   <div class="container">
 
     <div style="max-width:800px;margin:0 auto 48px;font-size:1.05rem;line-height:1.8;color:var(--text-dark-secondary);">
-      <p>Une boisson isotonique a une <strong style="color:var(--text-dark);">osmolarite proche de celle du sang</strong> (280-320 mOsm/L), ce qui lui permet d'etre absorbee plus rapidement que l'eau seule. Elle combine hydratation et apport energetique en une seule prise, ce qui en fait le choix numero un pour les efforts de 1 a 3 heures.</p>
-      <p style="margin-top:16px;">Le mot cle est <strong style="color:var(--text-dark);">boisson isotonique</strong> avec 6600 recherches mensuelles en France. C'est le produit le plus recherche dans la categorie nutrition sportive, devant les gels et les electrolytes.</p>
+      <p>Une boisson isotonique a une <strong style="color:var(--text-dark);">osmolarité proche de celle du sang</strong> (280-320 mOsm/L), ce qui lui permet d'être absorbée plus rapidement que l'eau seule. Elle combine hydratation et apport énergétique en une seule prise, ce qui en fait le choix numéro un pour les efforts de 1 à 3 heures.</p>
+      <p style="margin-top:16px;">Avec 6600 recherches mensuelles en France, la boisson isotonique est le produit le plus recherché dans la catégorie nutrition sportive, devant les gels et les électrolytes.</p>
     </div>
 
     <details style="max-width:800px;margin:0 auto 48px;background:var(--bg-alt);border-radius:var(--radius-md);padding:0;">
-      <summary style="padding:16px 20px;cursor:pointer;font-family:var(--font-heading);font-weight:600;font-size:0.95rem;color:var(--text-dark);">Notre methodologie de test</summary>
+      <summary style="padding:16px 20px;cursor:pointer;font-family:var(--font-heading);font-weight:600;font-size:0.95rem;color:var(--text-dark);">Notre méthodologie de test</summary>
       <div style="padding:0 20px 16px;font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.7;">
-        <p>Chaque boisson est evaluee selon <strong>10 criteres</strong> :</p>
+        <p>Chaque boisson est évaluée selon <strong>10 critères</strong> :</p>
         <ul style="margin:12px 0;padding-left:20px;">
-          <li><strong>Osmolarite</strong> (25%) : concentration mesuree, conformite au statut isotonique</li>
+          <li><strong>Osmolarité</strong> (25%) : concentration mesurée, conformité au statut isotonique</li>
           <li><strong>Composition glucidique</strong> (20%) : type de glucides, ratio, concentration (4-8%)</li>
-          <li><strong>Profil mineral</strong> (15%) : sodium, potassium, magnesium, calcium</li>
-          <li><strong>Digestibilite</strong> (15%) : tolerance gastrique a l'effort, absence de troubles</li>
-          <li><strong>Gout</strong> (10%) : palatabilite en cours d'effort (different du gout au repos)</li>
-          <li><strong>Rapport qualite-prix</strong> (10%) : cout par dose et par gramme de glucides</li>
-          <li><strong>Dissolution et praticite</strong> (5%) : facilite de preparation, transport</li>
+          <li><strong>Profil minéral</strong> (15%) : sodium, potassium, magnésium, calcium</li>
+          <li><strong>Digestibilité</strong> (15%) : tolérance gastrique à l'effort, absence de troubles</li>
+          <li><strong>Goût</strong> (10%) : palatabilité en cours d'effort (différent du goût au repos)</li>
+          <li><strong>Rapport qualité-prix</strong> (10%) : coût par dose et par gramme de glucides</li>
+          <li><strong>Dissolution et praticité</strong> (5%) : facilité de préparation, transport</li>
         </ul>
       </div>
     </details>
@@ -288,16 +298,16 @@ const products = [
       <h2 style="font-size:1.6rem;margin-bottom:24px;">Guide : comment choisir sa boisson isotonique ?</h2>
 
       <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">1. La concentration en glucides</h3>
-      <p style="color:var(--text-dark-secondary);line-height:1.8;">Une boisson isotonique contient entre <strong style="color:var(--text-dark);">4% et 8% de glucides</strong> (40 a 80 g par litre). En dessous de 4%, on parle de boisson hypotonique (hydratation prioritaire, peu d'energie). Au-dessus de 8%, la boisson devient hypertonique et ralentit la vidange gastrique. Le ratio ideal maltodextrine/fructose est 2:1.</p>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Une boisson isotonique contient entre <strong style="color:var(--text-dark);">4% et 8% de glucides</strong> (40 à 80 g par litre). En dessous de 4%, on parle de boisson hypotonique (hydratation prioritaire, peu d'énergie). Au-dessus de 8%, la boisson devient hypertonique et ralentit la vidange gastrique. Le ratio idéal maltodextrine/fructose est 2:1.</p>
 
-      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">2. L'osmolarite</h3>
-      <p style="color:var(--text-dark-secondary);line-height:1.8;">L'osmolarite mesure la concentration en particules dissoutes. Le sang humain est a environ <strong style="color:var(--text-dark);">285-295 mOsm/L</strong>. Une boisson isotonique se situe entre 270 et 330 mOsm/L. Certaines marques comme Maurten obtiennent une osmolarite basse malgre une haute concentration glucidique grace a la technologie hydrogel.</p>
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">2. L'osmolarité</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">L'osmolarité mesure la concentration en particules dissoutes. Le sang humain est à environ <strong style="color:var(--text-dark);">285-295 mOsm/L</strong>. Une boisson isotonique se situe entre 270 et 330 mOsm/L. Certaines marques comme Maurten obtiennent une osmolarité basse malgré une haute concentration glucidique grâce à la technologie hydrogel.</p>
 
-      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">3. Les electrolytes</h3>
-      <p style="color:var(--text-dark-secondary);line-height:1.8;">Le <strong style="color:var(--text-dark);">sodium</strong> (400-800 mg/L) est essentiel pour l'absorption intestinale et la retention hydrique. Le potassium et le magnesium completent le profil mineral. Verifiez que la boisson contient au minimum du sodium en quantite significative.</p>
+      <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">3. Les électrolytes</h3>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Le <strong style="color:var(--text-dark);">sodium</strong> (400-800 mg/L) est essentiel pour l'absorption intestinale et la rétention hydrique. Le potassium et le magnésium complètent le profil minéral. Vérifiez que la boisson contient au minimum du sodium en quantité significative.</p>
 
       <h3 style="font-size:1.15rem;margin:24px 0 12px;color:var(--primary);">4. Boisson isotonique ou gels + eau ?</h3>
-      <p style="color:var(--text-dark-secondary);line-height:1.8;">Pour les efforts de 1 a 3 heures, une boisson isotonique seule peut suffire (hydratation + energie). Au-dela de 3 heures ou pour les ultra-trails, combiner une boisson electrolytique (sans glucides) avec des gels offre plus de flexibilite pour ajuster l'apport energetique independamment de l'hydratation.</p>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;">Pour les efforts de 1 à 3 heures, une boisson isotonique seule peut suffire (hydratation + énergie). Au-delà de 3 heures ou pour les ultra-trails, combiner une boisson électrolytique (sans glucides) avec des gels offre plus de flexibilité pour ajuster l'apport énergétique indépendamment de l'hydratation.</p>
     </div>
 
   </div>
@@ -305,24 +315,24 @@ const products = [
 
 <section class="section-alt">
   <div class="container">
-    <h2 class="section-title">Questions frequentes sur les boissons isotoniques</h2>
+    <h2 class="section-title">Questions fréquentes sur les boissons isotoniques</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question">Quelle quantite de boisson isotonique boire par heure ?</button>
+        <button class="faq-question">Quelle quantité de boisson isotonique boire par heure ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">La recommandation est de 500 a 800 ml par heure d'effort, par petites gorgees de 150-200 ml toutes les 15-20 minutes. Ajustez en fonction de la temperature, de votre taux de sudation et de l'intensite. Un moyen simple de verifier : pesez-vous avant et apres l'effort. Chaque kilo perdu correspond a environ 1 litre de deficit hydrique.</div>
+          <div class="faq-answer-inner">La recommandation est de 500 à 800 ml par heure d'effort, par petites gorgées de 150-200 ml toutes les 15-20 minutes. Ajustez en fonction de la température, de votre taux de sudation et de l'intensité. Un moyen simple de vérifier : pesez-vous avant et après l'effort. Chaque kilo perdu correspond à environ 1 litre de déficit hydrique.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Peut-on melanger boisson isotonique et gel energetique ?</button>
+        <button class="faq-question">Peut-on mélanger boisson isotonique et gel énergétique ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Oui, mais avec prudence. Prenez votre gel avec de l'eau pure (pas avec la boisson isotonique) pour eviter de depasser 90 g de glucides par heure, ce qui provoquerait des troubles digestifs. Alternativement, utilisez une boisson electrolytique sans glucides avec vos gels.</div>
+          <div class="faq-answer-inner">Oui, mais avec prudence. Prenez votre gel avec de l'eau pure (pas avec la boisson isotonique) pour éviter de dépasser 90 g de glucides par heure, ce qui provoquerait des troubles digestifs. Alternativement, utilisez une boisson électrolytique sans glucides avec vos gels.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Les boissons isotoniques du commerce sont-elles fiables ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">La plupart des boissons isotoniques de marques specialisees (SIS, Overstim's, NutriForce, Maurten) ont des formulations scientifiquement validees. Mefiez-vous des boissons de grande surface qui utilisent le terme "isotonique" sans mesure d'osmolarite reelle. Verifiez la concentration en glucides (4-8%) et la presence de sodium en quantite significative (>400 mg/L).</div>
+          <div class="faq-answer-inner">La plupart des boissons isotoniques de marques spécialisées (SIS, Overstim's, NutriForce, Maurten) ont des formulations scientifiquement validées. Méfiez-vous des boissons de grande surface qui utilisent le terme "isotonique" sans mesure d'osmolarité réelle. Vérifiez la concentration en glucides (4-8%) et la présence de sodium en quantité significative (>400 mg/L).</div>
         </div>
       </div>
     </div>
@@ -332,10 +342,10 @@ const products = [
 <section class="section-dark" style="text-align:center;">
   <div class="container">
     <h2 class="section-title" style="color:var(--text-light);">Explorez nos autres comparatifs</h2>
-    <p class="section-subtitle">Gels, electrolytes, complements : trouvez tout pour performer.</p>
+    <p class="section-subtitle">Gels, électrolytes, compléments : trouvez tout pour performer.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Comparatif gels</a>
-      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Comparatif electrolytes</a>
+      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Comparatif électrolytes</a>
     </div>
   </div>
 </section>

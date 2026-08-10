@@ -7,7 +7,7 @@ const schemaOrg = JSON.stringify({
   "@type": "WebSite",
   "name": "Running et Trail",
   "url": "https://running-et-trail.fr",
-  "description": "Comparatifs, tests et guides pour les coureurs et traileurs. Gels energetiques, electrolytes, boissons isotoniques et complements endurance.",
+  "description": "Le magazine en ligne de la course à pied et du trail running. Articles, portraits d'athlètes, guides entraînement et nutrition.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://running-et-trail.fr/recherche?q={search_term_string}",
@@ -17,131 +17,107 @@ const schemaOrg = JSON.stringify({
 ---
 
 <BaseLayout
-  title="Running et Trail - Comparatifs, Tests et Guides pour Coureurs et Traileurs"
-  description="Comparatifs independants des meilleurs gels energetiques, electrolytes et boissons isotoniques. Guides nutrition, entrainement et equipement pour la course a pied et le trail."
+  title="Running et Trail - Le magazine de la course à pied et du trail running"
+  description="Articles, portraits d'athlètes, guides entraînement et nutrition pour la course à pied et le trail running. Plans marathon, ultra-trail, récupération et conseils pratiques."
   canonical="/"
   schema={schemaOrg}
 >
 
-<!-- Hero -->
+<!-- Hero éditorial -->
 <section class="hero">
   <div class="container">
-    <h1>Courez plus loin, plus fort, mieux equipe</h1>
-    <p>Comparatifs independants, tests terrain et guides experts pour optimiser votre nutrition et vos performances en course a pied et trail running.</p>
+    <p style="font-size:0.9rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--primary);font-weight:700;margin-bottom:16px;">Le magazine du trail et de la course à pied</p>
+    <h1>Entraînement, nutrition et portraits d'athlètes</h1>
+    <p>Plans d'entraînement, guides nutrition, récits de course et portraits des plus grands noms du trail et de l'ultra-trail. Tout pour progresser, du 10 km à l'ultra.</p>
     <div class="hero-cta">
-      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Comparatif gels energetiques</a>
-      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Comparatif electrolytes</a>
+      <a href="/articles" class="btn btn-primary">Lire nos articles</a>
+      <a href="/athletes" class="btn btn-secondary">Portraits d'athlètes</a>
     </div>
   </div>
 </section>
 
-<!-- Comparatifs -->
+<!-- Articles à la une -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Nos comparatifs</h2>
-    <p class="section-subtitle">Tests independants et analyses detaillees pour vous aider a choisir les meilleurs produits pour votre pratique.</p>
-    <div class="features-grid">
-      <a href="/comparatifs/gels-energetiques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">01</div>
-        <h3>Gels energetiques</h3>
-        <p>Top 10 des meilleurs gels pour le marathon et le trail. Composition, gout, digestibilite et rapport qualite-prix compares.</p>
-      </a>
-      <a href="/comparatifs/electrolytes" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">02</div>
-        <h3>Electrolytes</h3>
-        <p>Comparatif des boissons et pastilles d'electrolytes. Sodium, potassium, magnesium - tout ce qu'il faut savoir.</p>
-      </a>
-      <a href="/comparatifs/boissons-isotoniques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">03</div>
-        <h3>Boissons isotoniques</h3>
-        <p>Les meilleures boissons isotoniques pour l'effort. Osmolarite, glucides et mineraux passes au crible.</p>
-      </a>
-      <a href="/comparatifs/complements-endurance" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">04</div>
-        <h3>Complements endurance</h3>
-        <p>BCAA, creatine, beta-alanine, cafeine - quels complements fonctionnent vraiment pour les sports d'endurance ?</p>
-      </a>
-      <a href="/articles" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">05</div>
-        <h3>Guides et articles</h3>
-        <p>Plans d'entrainement, nutrition, technique de course et conseils pratiques pour tous les niveaux.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Stats -->
-<section class="section-dark">
-  <div class="container">
-    <div class="features-grid" style="text-align:center;">
-      <div class="fade-in">
-        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">50+</div>
-        <p style="color:var(--text-light-secondary);margin-top:8px;">Produits testes</p>
-      </div>
-      <div class="fade-in">
-        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">12</div>
-        <p style="color:var(--text-light-secondary);margin-top:8px;">Criteres d'evaluation</p>
-      </div>
-      <div class="fade-in">
-        <div style="font-size:2.5rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">100%</div>
-        <p style="color:var(--text-light-secondary);margin-top:8px;">Tests independants</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Articles -->
-<section class="section-alt">
-  <div class="container">
-    <h2 class="section-title">Derniers articles</h2>
-    <p class="section-subtitle">Guides pratiques, conseils nutrition et entrainement pour progresser en course a pied et trail.</p>
+    <h2 class="section-title">À la une</h2>
+    <p class="section-subtitle">Nos derniers guides et articles pour progresser en course à pied et trail running.</p>
     <div class="articles-grid">
       <a href="/articles/plan-entrainement-marathon" class="article-card fade-in">
         <div style="width:100%;height:200px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Entrainement</span>
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Entraînement</span>
         </div>
         <div class="article-card-content">
-          <span class="article-card-tag">Entrainement</span>
-          <h3>Plan entrainement marathon : 16 semaines pour performer</h3>
-          <p>Plan detaille semaine par semaine pour preparer votre marathon. Objectifs sub-4h et sub-3h30.</p>
+          <span class="article-card-tag">Entraînement</span>
+          <h3>Plan entraînement marathon : 16 semaines pour performer</h3>
+          <p>Plan détaillé semaine par semaine pour préparer votre marathon. Objectifs sub-4h et sub-3h30.</p>
         </div>
       </a>
-      <a href="/articles/programme-course-debutant" class="article-card fade-in">
-        <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Entrainement</span>
+      <a href="/articles/debuter-trail" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Trail</span>
         </div>
         <div class="article-card-content">
-          <span class="article-card-tag">Entrainement</span>
-          <h3>Programme course a pied debutant : 0 a 30 min en 8 semaines</h3>
-          <p>Plan progressif pour debuter la course a pied. Du marche-courre a 30 minutes de course continue.</p>
+          <span class="article-card-tag">Trail</span>
+          <h3>Débuter le trail running : équipement, nutrition et entraînement</h3>
+          <p>Guide complet pour passer de la route aux sentiers. Chaussures, sac, plan d'entraînement et erreurs à éviter.</p>
         </div>
       </a>
       <a href="/articles/nutrition-marathon" class="article-card fade-in">
-        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
           <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Nutrition</span>
         </div>
         <div class="article-card-content">
           <span class="article-card-tag">Nutrition</span>
-          <h3>Nutrition marathon : le guide complet pour performer</h3>
-          <p>Strategie nutritionnelle avant, pendant et apres un marathon. Glucides, hydratation et plan de ravitaillement.</p>
+          <h3>Nutrition marathon : le guide complet pour performer le jour J</h3>
+          <p>Stratégie nutritionnelle avant, pendant et après un marathon. Glucides, hydratation et plan de ravitaillement.</p>
+        </div>
+      </a>
+      <a href="/articles/programme-course-debutant" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#1a1a2e,#2d1b4e);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Débutant</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Entraînement</span>
+          <h3>Programme course à pied débutant : de 0 à 30 min en 8 semaines</h3>
+          <p>Plan progressif pour débuter la course à pied. Du marché-courre à 30 minutes de course continue.</p>
+        </div>
+      </a>
+      <a href="/articles/entrainement-fractionne" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#3b0d0d,#5c1a1a);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Performance</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Entraînement</span>
+          <h3>Entraînement fractionné : guide et séances VMA</h3>
+          <p>Tout sur le fractionné en course à pied. Types de séances, calcul des allures et progression.</p>
+        </div>
+      </a>
+      <a href="/articles/hydratation-course-a-pied" class="article-card fade-in">
+        <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d2a3b,#1a4a5c);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Nutrition</span>
+        </div>
+        <div class="article-card-content">
+          <span class="article-card-tag">Nutrition</span>
+          <h3>Hydratation en course à pied : combien boire et quand</h3>
+          <p>Guide complet de l'hydratation. Taux de sudation, sodium, protocoles par distance.</p>
         </div>
       </a>
     </div>
     <div style="text-align:center;margin-top:40px;">
-      <a href="/articles" class="btn btn-outline">Tous les articles</a>
+      <a href="/articles" class="btn btn-outline">Tous nos articles</a>
     </div>
   </div>
 </section>
 
-<!-- Athletes -->
-<section class="section">
+<!-- Portraits d'athlètes -->
+<section class="section-alt">
   <div class="container">
-    <h2 class="section-title">Portraits d'athletes</h2>
-    <p class="section-subtitle">Decouvrez les legendes du trail et de l'ultra-trail : leur parcours, leurs records et les lecons a en tirer.</p>
+    <h2 class="section-title">Portraits d'athlètes</h2>
+    <p class="section-subtitle">Les légendes du trail et de l'ultra-trail : leur parcours, leurs records et les leçons à en tirer pour progresser.</p>
     <div class="features-grid" style="grid-template-columns:repeat(4,1fr);">
       <a href="/articles/kilian-jornet-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
-        <div style="width:100%;height:140px;overflow:hidden;">
-          <img src="/images/athletes/kilian-jornet.webp" alt="Kilian Jornet" title="Kilian Jornet" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="/images/athletes/kilian-jornet.webp" alt="Kilian Jornet en compétition de trail" title="Kilian Jornet" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div style="padding:16px;">
           <h3 style="font-size:0.95rem;">Kilian Jornet</h3>
@@ -149,30 +125,30 @@ const schemaOrg = JSON.stringify({
         </div>
       </a>
       <a href="/articles/francois-dhaene-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
-        <div style="width:100%;height:140px;overflow:hidden;">
-          <img src="/images/athletes/francois-dhaene.webp" alt="Francois D'Haene" title="Francois D'Haene" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="/images/athletes/francois-dhaene.webp" alt="François D'Haene en présentation" title="François D'Haene" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div style="padding:16px;">
-          <h3 style="font-size:0.95rem;">Francois D'Haene</h3>
+          <h3 style="font-size:0.95rem;">François D'Haene</h3>
           <p style="font-size:0.82rem;">4x UTMB, vigneron champion</p>
         </div>
       </a>
       <a href="/articles/courtney-dauwalter-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
-        <div style="width:100%;height:140px;overflow:hidden;">
-          <img src="/images/athletes/courtney-dauwalter.webp" alt="Courtney Dauwalter" title="Courtney Dauwalter" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="/images/athletes/courtney-dauwalter.webp" alt="Courtney Dauwalter en ultra-trail" title="Courtney Dauwalter" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div style="padding:16px;">
           <h3 style="font-size:0.95rem;">Courtney Dauwalter</h3>
           <p style="font-size:0.82rem;">2x UTMB, reine de l'ultra</p>
         </div>
       </a>
-      <a href="/articles/jim-walmsley-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
-        <div style="width:100%;height:140px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:1.2rem;color:var(--primary);">JW</span>
+      <a href="/articles/xavier-thevenard-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="/images/athletes/xavier-thevenard.webp" alt="Xavier Thévenard en montagne" title="Xavier Thévenard" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div style="padding:16px;">
-          <h3 style="font-size:0.95rem;">Jim Walmsley</h3>
-          <p style="font-size:0.82rem;">3x Western States, recordman</p>
+          <h3 style="font-size:0.95rem;">Xavier Thévenard</h3>
+          <p style="font-size:0.82rem;">3x UTMB, le Jurassien</p>
         </div>
       </a>
     </div>
@@ -182,90 +158,142 @@ const schemaOrg = JSON.stringify({
   </div>
 </section>
 
-<!-- Thematiques -->
-<section class="section-alt">
+<!-- Thématiques -->
+<section class="section">
   <div class="container">
-    <h2 class="section-title">Explorez par thematique</h2>
-    <p class="section-subtitle">Course sur route, trail, ultra-endurance ou triathlon - retrouvez nos guides adaptes a votre pratique.</p>
+    <h2 class="section-title">Explorez par thématique</h2>
+    <p class="section-subtitle">Course sur route, trail, ultra-endurance - retrouvez nos guides adaptés à votre pratique.</p>
     <div class="features-grid" style="grid-template-columns:repeat(4,1fr);">
-      <div class="feature-card fade-in" style="text-align:center;">
+      <a href="/articles/plan-entrainement-marathon" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;">
         <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">ROUTE</div>
         <h3 style="font-size:1rem;">Course sur route</h3>
-        <p>10 km, semi, marathon</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
+        <p>10 km, semi-marathon, marathon : plans d'entraînement et stratégies de course.</p>
+      </a>
+      <a href="/articles/debuter-trail" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;">
         <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">TRAIL</div>
         <h3 style="font-size:1rem;">Trail running</h3>
-        <p>Sentiers et montagne</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
+        <p>Sentiers, montagne, technique de descente et équipement spécifique.</p>
+      </a>
+      <a href="/articles/kilian-jornet-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;">
         <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">ULTRA</div>
         <h3 style="font-size:1rem;">Ultra-endurance</h3>
-        <p>Ultra-trail et 100 miles</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
-        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">TRI</div>
-        <h3 style="font-size:1rem;">Triathlon</h3>
-        <p>Natation, velo, course</p>
-      </div>
+        <p>UTMB, Western States, 100 miles : préparation et récits de course.</p>
+      </a>
+      <a href="/articles/nutrition-marathon" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;">
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">NUTRITION</div>
+        <h3 style="font-size:1rem;">Nutrition sportive</h3>
+        <p>Alimentation, hydratation, gels et compléments pour l'effort.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Guides populaires -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Guides les plus lus</h2>
+    <p class="section-subtitle">Les articles essentiels pour bien démarrer ou progresser.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+      <a href="/articles/comment-bien-courir" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">01</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">Comment bien courir : technique et posture</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">12 min de lecture</p>
+        </div>
+      </a>
+      <a href="/articles/courir-pour-maigrir" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">02</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">Courir pour maigrir : le guide réaliste</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">13 min de lecture</p>
+        </div>
+      </a>
+      <a href="/articles/eviter-blessures-course" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">03</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">Éviter les blessures en course à pied</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">14 min de lecture</p>
+        </div>
+      </a>
+      <a href="/articles/que-manger-avant-marathon" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">04</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">Que manger avant un marathon</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">11 min de lecture</p>
+        </div>
+      </a>
+      <a href="/articles/bienfaits-course-a-pied" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">05</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">10 bienfaits prouvés de la course à pied</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">11 min de lecture</p>
+        </div>
+      </a>
+      <a href="/articles/recuperation-apres-marathon" style="display:flex;gap:16px;align-items:center;padding:20px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s;" class="fade-in">
+        <div style="min-width:48px;height:48px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:var(--font-heading);font-size:0.85rem;">06</div>
+        <div>
+          <h3 style="font-size:0.95rem;margin-bottom:4px;">Récupération après marathon</h3>
+          <p style="font-size:0.82rem;color:var(--text-dark-secondary);">12 min de lecture</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section-alt">
+<section class="section">
   <div class="container">
-    <h2 class="section-title">Questions frequentes</h2>
-    <p class="section-subtitle">Les reponses aux questions les plus posees sur la nutrition et l'equipement en course a pied.</p>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Les réponses aux questions les plus posées sur la course à pied.</p>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question">Quel gel energetique choisir pour un marathon ?</button>
+        <button class="faq-question">Comment débuter la course à pied ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Pour un marathon, privilegiez un gel avec un ratio maltodextrine/fructose de 2:1 pour une absorption optimale. La concentration en glucides doit etre entre 20 et 30g par gel. Testez toujours vos gels a l'entrainement avant la course. Consultez notre <a href="/comparatifs/gels-energetiques">comparatif gels energetiques</a> et notre guide <a href="/articles/quand-prendre-gel-energetique">quand prendre un gel</a>.</div>
+          <div class="faq-answer-inner">Commencez par un programme progressif alternant marche et course pendant 8 semaines. Trois séances par semaine suffisent, avec au moins un jour de repos entre chaque sortie. L'allure doit être très lente : vous devez pouvoir parler sans être essoufflé. Consultez notre <a href="/articles/programme-course-debutant">programme débutant complet</a>.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Comment debuter la course a pied ?</button>
+        <button class="faq-question">Comment préparer un marathon ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Commencez par un programme progressif alternant marche et course pendant 8 semaines. Trois seances par semaine suffisent, avec au moins un jour de repos entre chaque sortie. L'allure doit etre tres lente : vous devez pouvoir parler sans etre essouffle. Consultez notre <a href="/articles/programme-course-debutant">programme debutant complet</a>.</div>
+          <div class="faq-answer-inner">Un plan de 12 à 16 semaines est idéal. Augmentez progressivement le volume (maximum 10% par semaine) avec une répartition 80% endurance fondamentale, 20% intensité. La sortie longue hebdomadaire est la séance clé. Notre <a href="/articles/plan-entrainement-marathon">plan marathon 16 semaines</a> détaille chaque étape.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Que manger avant un marathon ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">La surcharge glucidique commence 3 jours avant (8-10 g de glucides par kg de poids). Le dernier repas se prend 3 heures avant le depart : pain blanc, confiture, miel et 500 ml d'eau. 30 minutes avant, un dernier gel de 20-30 g de glucides optimise la glycemie. Notre <a href="/articles/que-manger-avant-marathon">guide nutrition pre-marathon</a> detaille chaque etape.</div>
+          <div class="faq-answer-inner">La surcharge glucidique commence 3 jours avant (8-10 g de glucides par kg de poids). Le dernier repas se prend 3 heures avant le départ : pain blanc, confiture, miel et 500 ml d'eau. 30 minutes avant, un dernier gel de 20-30 g de glucides optimise la glycémie. Notre <a href="/articles/que-manger-avant-marathon">guide nutrition pré-marathon</a> détaille chaque étape.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Combien de km par semaine pour preparer un marathon ?</button>
+        <button class="faq-question">La course à pied fait-elle maigrir ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Un debutant vise 40-50 km/semaine, un coureur intermediaire 60-80 km et un confirme 80-100 km. L'important est d'augmenter progressivement (maximum 10% par semaine) et de respecter la repartition 80% endurance facile, 20% intensite. Retrouvez tous les details dans notre <a href="/articles/combien-km-semaine-marathon">guide volume marathon</a>.</div>
+          <div class="faq-answer-inner">Oui, la course à pied brûle 400 à 800 kcal par heure selon l'allure et le poids. Mais l'alimentation reste le facteur numéro 1 : sans déficit calorique, pas de perte de poids. Combiner endurance fondamentale et séances plus intenses (fractionné) optimise la dépense énergétique. Notre <a href="/articles/courir-pour-maigrir">guide course et perte de poids</a> explique tout.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">La course a pied fait-elle maigrir ?</button>
+        <button class="faq-question">Comment éviter les blessures en course à pied ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Oui, la course a pied brule 400 a 800 kcal par heure selon l'allure et le poids. Mais l'alimentation reste le facteur numero 1 : sans deficit calorique, pas de perte de poids. Combiner endurance fondamentale et seances plus intenses (fractionne) optimise la depense energetique. Notre <a href="/articles/courir-pour-maigrir">guide course et perte de poids</a> explique tout.</div>
+          <div class="faq-answer-inner">Les trois règles d'or : augmentez le volume progressivement (règle des 10%), intégrez du renforcement musculaire (2 séances par semaine) et respectez les jours de repos. Le choix des chaussures adaptées à votre foulée est également essentiel. Notre <a href="/articles/eviter-blessures-course">guide prévention des blessures</a> détaille les 8 pathologies les plus courantes.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Faut-il prendre des electrolytes pendant la course ?</button>
+        <button class="faq-question">C'est quoi le trail running ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Oui, surtout pour les efforts de plus d'une heure ou par temps chaud. Le sodium est le mineral le plus important : 300 a 600 mg par heure selon l'intensite. Les pastilles d'electrolytes ou les boissons isotoniques sont les moyens les plus pratiques. Notre <a href="/comparatifs/electrolytes">comparatif electrolytes</a> vous aide a choisir.</div>
+          <div class="faq-answer-inner">Le trail running est la course à pied en milieu naturel : sentiers, chemins forestiers, montagne. Il existe des formats variés, du trail court (moins de 42 km) à l'ultra-trail (plus de 80 km). Le trail demande un équipement spécifique et une préparation adaptée. Notre <a href="/articles/debuter-trail">guide pour débuter le trail</a> couvre tout ce qu'il faut savoir.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA final -->
+<!-- CTA éditorial -->
 <section class="section-dark" style="text-align:center;">
   <div class="container">
-    <h2 class="section-title" style="color:var(--text-light);">Trouvez le produit ideal pour votre pratique</h2>
-    <p class="section-subtitle">Nos comparatifs independants vous aident a choisir en toute confiance.</p>
+    <h2 class="section-title" style="color:var(--text-light);">Explorez tous nos contenus</h2>
+    <p class="section-subtitle">Articles, portraits, guides pratiques et comparatifs pour progresser en course à pied.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="/comparatifs/gels-energetiques" class="btn btn-primary">Voir les gels energetiques</a>
-      <a href="/comparatifs/electrolytes" class="btn btn-secondary">Voir les electrolytes</a>
+      <a href="/articles" class="btn btn-primary">Tous les articles</a>
+      <a href="/athletes" class="btn btn-secondary">Portraits d'athlètes</a>
     </div>
   </div>
 </section>
