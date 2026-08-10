@@ -1,8 +1,5 @@
 name = "running-et-trail"
 compatibility_date = "2026-08-08"
 
-[build]
-command = "npm run build"
-
 [assets]
 directory = "./dist"
