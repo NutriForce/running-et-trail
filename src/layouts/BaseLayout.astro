@@ -174,19 +174,22 @@ const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-def
     });
 
     (function() {
-      const params = new URLSearchParams(window.location.search);
-      const trackKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid','msclkid','dclid','wbraid','gbraid'];
-      const tracked = new URLSearchParams();
-      trackKeys.forEach(function(k) {
-        if (params.has(k)) tracked.set(k, params.get(k));
-      });
-      if (tracked.toString() === '') return;
+      var trackKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid','msclkid','dclid','wbraid','gbraid'];
+      var params = new URLSearchParams(window.location.search);
+      var fresh = {};
+      trackKeys.forEach(function(k) { if (params.has(k)) fresh[k] = params.get(k); });
+      if (Object.keys(fresh).length) {
+        document.cookie = '_tk=' + encodeURIComponent(JSON.stringify(fresh)) + ';path=/;max-age=2592000;SameSite=Lax';
+      }
+      var raw = (document.cookie.match(/(^|; )_tk=([^;]*)/) || [])[2];
+      if (!raw) return;
+      try { var tracked = JSON.parse(decodeURIComponent(raw)); } catch(e) { return; }
       var host = window.location.hostname;
       document.querySelectorAll('a[href]').forEach(function(a) {
         try {
           var url = new URL(a.href);
           if (url.hostname === host) return;
-          tracked.forEach(function(v, k) { url.searchParams.set(k, v); });
+          Object.keys(tracked).forEach(function(k) { url.searchParams.set(k, tracked[k]); });
           a.href = url.toString();
         } catch(e) {}
       });
