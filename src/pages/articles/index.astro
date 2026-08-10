@@ -2,6 +2,17 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 
+const athleteImages: Record<string, string> = {
+  "kilian-jornet": "/images/athletes/kilian-jornet.webp",
+  "francois-dhaene": "/images/athletes/francois-dhaene.webp",
+  "xavier-thevenard": "/images/athletes/xavier-thevenard.webp",
+  "courtney-dauwalter": "/images/athletes/courtney-dauwalter.webp",
+  "jim-walmsley": "/images/athletes/jim-walmsley.webp",
+  "mathieu-blanchard": "/images/athletes/mathieu-blanchard.webp",
+  "nathalie-mauclair": "/images/athletes/nathalie-mauclair.webp",
+  "martin-kern": "/images/athletes/martin-kern.webp",
+};
+
 const articles = [
   {
     title: "Programme course à pied débutant : de 0 à 30 min en 8 semaines",
@@ -279,11 +290,18 @@ const articles = [
 <section class="section">
   <div class="container">
     <div class="articles-grid">
-      {articles.map(a => (
+      {articles.map(a => {
+        const slug = a.url.replace('/articles/', '').replace('-portrait', '');
+        const athleteImg = athleteImages[slug];
+        return (
         <a href={a.url} class="article-card fade-in">
-          <div style={`width:100%;height:200px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;`}>
-            <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">{a.category}</span>
-          </div>
+          {athleteImg ? (
+            <img src={athleteImg} alt={a.title} style="width:100%;height:200px;object-fit:cover;" loading="lazy" />
+          ) : (
+            <div style={`width:100%;height:200px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;`}>
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">{a.category}</span>
+            </div>
+          )}
           <div class="article-card-content">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
               <span class="article-card-tag">{a.category}</span>
@@ -293,7 +311,8 @@ const articles = [
             <p>{a.description}</p>
           </div>
         </a>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>
