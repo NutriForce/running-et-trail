@@ -172,6 +172,25 @@ const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-def
         link.classList.add('active');
       }
     });
+
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const trackKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid','msclkid','dclid','wbraid','gbraid'];
+      const tracked = new URLSearchParams();
+      trackKeys.forEach(function(k) {
+        if (params.has(k)) tracked.set(k, params.get(k));
+      });
+      if (tracked.toString() === '') return;
+      var host = window.location.hostname;
+      document.querySelectorAll('a[href]').forEach(function(a) {
+        try {
+          var url = new URL(a.href);
+          if (url.hostname === host) return;
+          tracked.forEach(function(v, k) { url.searchParams.set(k, v); });
+          a.href = url.toString();
+        } catch(e) {}
+      });
+    })();
   </script>
 </body>
 </html>
