@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Pas d'interet a indexer les ressources techniques
-Disallow: /css/
-Disallow: /js/
-
 Sitemap: https://running-et-trail.fr/sitemap-index.xml
