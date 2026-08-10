@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/global.css';
+
+const comparatifs = [
+  {
+    title: "Meilleurs gels énergétiques pour le running et le trail",
+    description: "Comparatif des 10 meilleurs gels énergétiques : composition, digestibilité, goût et rapport qualité-prix. Guide pour choisir le gel adapté à votre pratique.",
+    url: "/comparatifs/gels-energetiques",
+    icon: "&#9889;",
+    products: 10,
+  },
+  {
+    title: "Meilleurs électrolytes pour les coureurs d'endurance",
+    description: "Top 10 des électrolytes pour la course à pied : sodium, magnésium, potassium. Comparatif des formules les plus efficaces pour l'hydratation en compétition.",
+    url: "/comparatifs/electrolytes",
+    icon: "&#128167;",
+    products: 10,
+  },
+  {
+    title: "Meilleures boissons isotoniques pour le sport d'endurance",
+    description: "Comparatif des 10 meilleures boissons isotoniques : osmolarité, composition, goût et prix. Le guide pour choisir votre boisson d'effort.",
+    url: "/comparatifs/boissons-isotoniques",
+    icon: "&#127861;",
+    products: 10,
+  },
+  {
+    title: "Meilleurs compléments alimentaires pour l'endurance",
+    description: "Top 10 des compléments pour les sports d'endurance : créatine, bêta-alanine, caféine, fer, oméga 3. Comparatif basé sur les études scientifiques.",
+    url: "/comparatifs/complements-endurance",
+    icon: "&#128138;",
+    products: 10,
+  },
+];
+---
+
+<BaseLayout
+  title="Comparatifs nutrition sportive - Running et Trail"
+  description="Tous nos comparatifs de nutrition sportive pour le running et le trail : gels énergétiques, électrolytes, boissons isotoniques et compléments d'endurance."
+  canonical="/comparatifs"
+>
+
+<section style="max-width:800px;margin:0 auto;padding:40px 20px;">
+
+  <nav style="font-size:0.85rem;color:var(--text-muted);margin-bottom:24px;">
+    <a href="/" style="color:var(--primary);text-decoration:none;">Accueil</a> / Comparatifs
+  </nav>
+
+  <h1 style="font-family:var(--font-heading);font-size:2rem;margin-bottom:12px;">Nos comparatifs nutrition sportive</h1>
+
+  <p style="font-size:1.1rem;color:var(--text-secondary);margin-bottom:40px;">Chaque comparatif est rédigé après test des produits en conditions réelles d'entraînement et de compétition. Nous évaluons la composition, la digestibilité, le goût et le rapport qualité-prix pour vous aider à choisir.</p>
+
+  <div style="display:grid;gap:24px;">
+    {comparatifs.map((comp) => (
+      <a href={comp.url} style="display:block;padding:28px;background:var(--bg-card);border-radius:var(--radius-lg);text-decoration:none;color:inherit;box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s;border:1px solid var(--border);">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+          <span style="font-size:1.8rem;" set:html={comp.icon} />
+          <h2 style="font-family:var(--font-heading);font-size:1.15rem;margin:0;color:var(--text-primary);">{comp.title}</h2>
+        </div>
+        <p style="color:var(--text-secondary);margin:0 0 12px;font-size:0.95rem;line-height:1.6;">{comp.description}</p>
+        <span style="color:var(--primary);font-size:0.85rem;font-weight:600;">{comp.products} produits comparés &rarr;</span>
+      </a>
+    ))}
+  </div>
+
+  <div style="margin-top:48px;padding:24px;background:var(--bg-alt);border-radius:var(--radius-lg);text-align:center;">
+    <h3 style="font-family:var(--font-heading);font-size:1.1rem;margin-bottom:8px;">Notre méthode</h3>
+    <p style="color:var(--text-secondary);font-size:0.9rem;max-width:600px;margin:0 auto;">Tous les produits sont testés en conditions réelles par notre équipe de coureurs. Nous n'acceptons aucun placement payant : les classements reflètent notre évaluation honnête de chaque produit.</p>
+  </div>
+
+</section>
+
+</BaseLayout>
