@@ -298,7 +298,7 @@ const articles = [
 ---
 
 <BaseLayout
-  title="Articles Running et Trail - Guides Nutrition, Entraînement et Équipement"
+  title="Articles Running et Trail : nutrition et entraînement"
   description="Guides pratiques pour la course à pied et le trail running. Nutrition marathon, choix de gels énergétiques, entraînement trail et conseils pour débutants."
   canonical="/articles"
 >
@@ -323,7 +323,7 @@ const articles = [
         const img = articleImages[slug];
         return (
         <a href={a.url} class="article-card fade-in">
-          <img src={img} alt={a.title} style="width:100%;height:200px;object-fit:cover;" loading="lazy" />
+          <img src={img} alt={a.title} title={a.category + ' - ' + a.title.split(':')[0].trim()} style="width:100%;height:200px;object-fit:cover;" loading="lazy" />
           <div class="article-card-content">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
               <span class="article-card-tag">{a.category}</span>

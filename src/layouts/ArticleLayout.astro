@@ -14,21 +14,24 @@ interface Props {
   authorRole?: string;
 }
 
-const authors: Record<string, { name: string; role: string; bio: string }> = {
+const authors: Record<string, { name: string; role: string; bio: string; image?: string }> = {
   "julien-moreau": {
     name: "Julien Moreau",
     role: "Ultra-traileur et coach certifié",
-    bio: "Finisher de l'UTMB, CCC et Diagonale des Fous. Coach diplômé d'État en athlétisme, spécialisé dans la préparation des courses longues distances. 15 ans d'expérience en endurance."
+    bio: "Finisher de l'UTMB, CCC et Diagonale des Fous. Coach diplômé d'État en athlétisme, spécialisé dans la préparation des courses longues distances. 15 ans d'expérience en endurance.",
+    image: "/images/authors/julien-moreau.webp"
   },
   "camille-dupont": {
     name: "Camille Dupont",
     role: "Marathonienne et nutritionniste du sport",
-    bio: "Record personnel de 2h48 au marathon. Diététicienne-nutritionniste spécialisée dans la nutrition de l'effort. Accompagne des coureurs de tous niveaux depuis 10 ans."
+    bio: "Record personnel de 2h48 au marathon. Diététicienne-nutritionniste spécialisée dans la nutrition de l'effort. Accompagne des coureurs de tous niveaux depuis 10 ans.",
+    image: "/images/authors/camille-dupont.webp"
   },
   "thomas-lefevre": {
     name: "Thomas Lefevre",
     role: "Ultra-traileur",
-    bio: "Multiple podiums en trail national (80 km du Mont-Blanc, Grand Raid Réunion). Passionné d'endurance et de montagne, il partage son expérience de terrain et ses retours de course."
+    bio: "Multiple podiums en trail national (80 km du Mont-Blanc, Grand Raid Réunion). Passionné d'endurance et de montagne, il partage son expérience de terrain et ses retours de course.",
+    image: "/images/authors/thomas-lefevre.webp"
   }
 };
 
@@ -71,7 +74,11 @@ const schemaOrg = JSON.stringify({
       <slot />
 
       <div class="author-box">
-        <div class="author-avatar">{author.name.split(' ').map(n => n[0]).join('')}</div>
+        {author.image ? (
+          <img src={author.image} alt={author.name} title={`Photo de ${author.name}`} class="author-avatar" width="56" height="56" loading="lazy" />
+        ) : (
+          <div class="author-avatar">{author.name.split(' ').map(n => n[0]).join('')}</div>
+        )}
         <div class="author-info">
           <p class="author-name">{author.name}</p>
           <p class="author-role">{author.role}</p>
@@ -247,6 +254,7 @@ const schemaOrg = JSON.stringify({
     justify-content: center;
     font-weight: 700;
     font-size: 1.1rem;
+    object-fit: cover;
   }
   .author-name {
     font-weight: 700;

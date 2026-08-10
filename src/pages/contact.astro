@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout
+  title="Contactez Running et Trail : questions et partenariats"
+  description="Contactez l'équipe Running et Trail pour toute question sur nos comparatifs, nos articles ou une demande de partenariat. Réponse sous 48 heures ouvrées."
+  canonical="/contact"
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Contact</span>
+    </nav>
+    <h1>Nous contacter</h1>
+    <p>Une question, une suggestion ou une demande de partenariat ? Écrivez-nous.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:700px;">
+
+    <div style="background:var(--bg-alt);border-radius:var(--radius-lg);padding:40px;margin-bottom:32px;">
+      <h2 style="font-size:1.3rem;margin-bottom:16px;">Par email</h2>
+      <p style="color:var(--text-dark-secondary);line-height:1.8;margin-bottom:16px;">Pour toute question concernant nos comparatifs, nos articles ou une demande de partenariat :</p>
+      <p style="font-size:1.15rem;font-weight:600;"><a href="mailto:contact@running-et-trail.fr" style="color:var(--primary);">contact@running-et-trail.fr</a></p>
+      <p style="color:var(--text-dark-secondary);font-size:0.9rem;margin-top:12px;">Nous répondons généralement sous 48 heures.</p>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-bottom:16px;">Sujets courants</h2>
+    <div style="display:grid;gap:16px;">
+      <div style="padding:20px;border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius-md);">
+        <h3 style="font-size:1rem;color:var(--primary);margin-bottom:8px;">Comparatifs et tests</h3>
+        <p style="font-size:0.92rem;color:var(--text-dark-secondary);line-height:1.6;">Une question sur notre méthodologie ou un produit testé ? Nous détaillons nos critères sur chaque page comparatif.</p>
+      </div>
+      <div style="padding:20px;border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius-md);">
+        <h3 style="font-size:1rem;color:var(--primary);margin-bottom:8px;">Correction ou mise à jour</h3>
+        <p style="font-size:0.92rem;color:var(--text-dark-secondary);line-height:1.6;">Vous avez repéré une erreur dans un article ou un comparatif ? Signalez-la, nous corrigeons rapidement.</p>
+      </div>
+      <div style="padding:20px;border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius-md);">
+        <h3 style="font-size:1rem;color:var(--primary);margin-bottom:8px;">Partenariats</h3>
+        <p style="font-size:0.92rem;color:var(--text-dark-secondary);line-height:1.6;">Vous êtes une marque de nutrition sportive et souhaitez apparaître dans nos comparatifs ? Contactez-nous avec les détails de vos produits.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</BaseLayout>
