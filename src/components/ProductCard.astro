@@ -16,6 +16,8 @@ interface Props {
 }
 
 const { rank, brand, name, image, score, price, priceDose, keySpec, keySpecLabel, bullets, testUrl, productUrl, featured = false } = Astro.props;
+const isNutriForce = productUrl.includes('nutriforce.fr');
+const externalRel = isNutriForce ? 'noopener' : 'noopener nofollow';
 ---
 
 <div class={`product-card ${featured ? 'featured' : ''}`}>
@@ -46,6 +48,6 @@ const { rank, brand, name, image, score, price, priceDose, keySpec, keySpecLabel
   </ul>
   <div class="card-bottom">
     <a href={testUrl} class={`card-cta ${featured ? 'card-cta--primary' : 'card-cta--secondary'}`}>Lire notre test complet</a>
-    <a href={productUrl} class="card-link" target="_blank" rel="noopener nofollow">Voir le produit &rarr;</a>
+    <a href={productUrl} class="card-link" target="_blank" rel={externalRel}>Voir le produit &rarr;</a>
   </div>
 </div>

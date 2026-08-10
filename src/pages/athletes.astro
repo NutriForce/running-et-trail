@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const athletes = [
+  {
+    name: "Kilian Jornet",
+    subtitle: "Le roi de l'ultra-trail",
+    highlights: "3x UTMB, Hardrock 100, Western States, Summits of My Life",
+    url: "/articles/kilian-jornet-portrait",
+    image: "/images/athletes/kilian-jornet.webp",
+    country: "Espagne"
+  },
+  {
+    name: "Francois D'Haene",
+    subtitle: "Le vigneron quadruple vainqueur de l'UTMB",
+    highlights: "4x UTMB (2012, 2014, 2017, 2021), record GR20, JMT",
+    url: "/articles/francois-dhaene-portrait",
+    image: "/images/athletes/francois-dhaene.webp",
+    country: "France"
+  },
+  {
+    name: "Xavier Thevenard",
+    subtitle: "Le Jurassien triple vainqueur de l'UTMB",
+    highlights: "3x UTMB (2013, 2015, 2018), TDS, Echappee Belle",
+    url: "/articles/xavier-thevenard-portrait",
+    image: "/images/athletes/xavier-thevenard.webp",
+    country: "France"
+  },
+  {
+    name: "Courtney Dauwalter",
+    subtitle: "La reine incontestee de l'ultra-trail",
+    highlights: "2x UTMB, 3x Western States, Moab 240, Big Dog's Backyard",
+    url: "/articles/courtney-dauwalter-portrait",
+    image: "/images/athletes/courtney-dauwalter.webp",
+    country: "USA"
+  },
+  {
+    name: "Jim Walmsley",
+    subtitle: "L'ultra-runner au style offensif",
+    highlights: "3x Western States, record Grand Canyon R2R2R, marathon olympique 2024",
+    url: "/articles/jim-walmsley-portrait",
+    image: null,
+    country: "USA"
+  },
+  {
+    name: "Mathieu Blanchard",
+    subtitle: "Le Franco-Canadien vice-champion de l'UTMB",
+    highlights: "2e UTMB 2022, Diagonale des Fous, Transgrancanaria",
+    url: "/articles/mathieu-blanchard-portrait",
+    image: null,
+    country: "France / Canada"
+  },
+  {
+    name: "Martin Kern",
+    subtitle: "Le champion du trail court et XTERRA",
+    highlights: "Champion de France trail, multiple vainqueur XTERRA Europe",
+    url: "/articles/martin-kern-portrait",
+    image: null,
+    country: "France"
+  },
+  {
+    name: "Nathalie Mauclair",
+    subtitle: "La pompiere championne du monde d'ultra-trail",
+    highlights: "Championne du monde UTWT 2013 et 2015, Western States, CCC",
+    url: "/articles/nathalie-mauclair-portrait",
+    image: null,
+    country: "France"
+  }
+];
+---
+
+<BaseLayout
+  title="Portraits d'athletes - Trail et Ultra-Trail | Running et Trail"
+  description="Portraits des plus grands athletes du trail et de l'ultra-trail. Kilian Jornet, Francois D'Haene, Courtney Dauwalter, Jim Walmsley et plus encore."
+  canonical="/athletes"
+>
+
+<section class="hero-compact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <span style="color:var(--primary);">Athletes</span>
+    </nav>
+    <h1>Portraits d'athletes</h1>
+    <p>Les legendes du trail et de l'ultra-trail : leur parcours, leur entrainement, leur nutrition et les lecons a en tirer pour progresser.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;">
+      {athletes.map(a => (
+        <a href={a.url} style="text-decoration:none;color:inherit;display:block;border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-card);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s;" class="fade-in">
+          <div style={`width:100%;height:220px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;overflow:hidden;`}>
+            {a.image ? (
+              <img src={a.image} alt={a.name} title={a.name} style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+            ) : (
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);opacity:0.6;">PORTRAIT</span>
+            )}
+          </div>
+          <div style="padding:20px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="font-size:0.78rem;color:var(--text-dark-secondary);background:var(--bg-alt);padding:2px 10px;border-radius:20px;">{a.country}</span>
+            </div>
+            <h3 style="font-size:1.15rem;margin-bottom:4px;color:var(--text-dark);">{a.name}</h3>
+            <p style="font-size:0.92rem;color:var(--primary);font-weight:600;margin-bottom:8px;">{a.subtitle}</p>
+            <p style="font-size:0.85rem;color:var(--text-dark-secondary);line-height:1.5;">{a.highlights}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="color:var(--text-light);">Decouvrez aussi nos guides</h2>
+    <p class="section-subtitle">Nutrition, entrainement, recuperation : tout pour progresser en course a pied et trail.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/articles" class="btn btn-primary">Tous les articles</a>
+      <a href="/comparatifs/gels-energetiques" class="btn btn-secondary">Comparatif gels</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

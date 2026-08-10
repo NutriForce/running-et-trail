@@ -42,27 +42,27 @@ const schemaOrg = JSON.stringify({
     <p class="section-subtitle">Tests independants et analyses detaillees pour vous aider a choisir les meilleurs produits pour votre pratique.</p>
     <div class="features-grid">
       <a href="/comparatifs/gels-energetiques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">01</div>
         <h3>Gels energetiques</h3>
         <p>Top 10 des meilleurs gels pour le marathon et le trail. Composition, gout, digestibilite et rapport qualite-prix compares.</p>
       </a>
       <a href="/comparatifs/electrolytes" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">💧</div>
+        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">02</div>
         <h3>Electrolytes</h3>
         <p>Comparatif des boissons et pastilles d'electrolytes. Sodium, potassium, magnesium - tout ce qu'il faut savoir.</p>
       </a>
       <a href="/comparatifs/boissons-isotoniques" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">🥤</div>
+        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">03</div>
         <h3>Boissons isotoniques</h3>
         <p>Les meilleures boissons isotoniques pour l'effort. Osmolarite, glucides et mineraux passes au crible.</p>
       </a>
       <a href="/comparatifs/complements-endurance" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">💊</div>
+        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">04</div>
         <h3>Complements endurance</h3>
         <p>BCAA, creatine, beta-alanine, cafeine - quels complements fonctionnent vraiment pour les sports d'endurance ?</p>
       </a>
       <a href="/articles" class="feature-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="feature-icon">📚</div>
+        <div class="feature-icon" style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;color:var(--primary);">05</div>
         <h3>Guides et articles</h3>
         <p>Plans d'entrainement, nutrition, technique de course et conseils pratiques pour tous les niveaux.</p>
       </a>
@@ -98,7 +98,7 @@ const schemaOrg = JSON.stringify({
     <div class="articles-grid">
       <a href="/articles/plan-entrainement-marathon" class="article-card fade-in">
         <div style="width:100%;height:200px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:3rem;">🏅</span>
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Entrainement</span>
         </div>
         <div class="article-card-content">
           <span class="article-card-tag">Entrainement</span>
@@ -108,7 +108,7 @@ const schemaOrg = JSON.stringify({
       </a>
       <a href="/articles/programme-course-debutant" class="article-card fade-in">
         <div style="width:100%;height:200px;background:linear-gradient(135deg,#2d1b00,#4a2c00);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:3rem;">🏃</span>
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Entrainement</span>
         </div>
         <div class="article-card-content">
           <span class="article-card-tag">Entrainement</span>
@@ -118,7 +118,7 @@ const schemaOrg = JSON.stringify({
       </a>
       <a href="/articles/nutrition-marathon" class="article-card fade-in">
         <div style="width:100%;height:200px;background:linear-gradient(135deg,#0d3b0d,#1a5c1a);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:3rem;">🍽️</span>
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;">Nutrition</span>
         </div>
         <div class="article-card-content">
           <span class="article-card-tag">Nutrition</span>
@@ -133,29 +133,78 @@ const schemaOrg = JSON.stringify({
   </div>
 </section>
 
-<!-- Thematiques -->
+<!-- Athletes -->
 <section class="section">
+  <div class="container">
+    <h2 class="section-title">Portraits d'athletes</h2>
+    <p class="section-subtitle">Decouvrez les legendes du trail et de l'ultra-trail : leur parcours, leurs records et les lecons a en tirer.</p>
+    <div class="features-grid" style="grid-template-columns:repeat(4,1fr);">
+      <a href="/articles/kilian-jornet-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
+        <div style="width:100%;height:140px;overflow:hidden;">
+          <img src="/images/athletes/kilian-jornet.webp" alt="Kilian Jornet" title="Kilian Jornet" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        </div>
+        <div style="padding:16px;">
+          <h3 style="font-size:0.95rem;">Kilian Jornet</h3>
+          <p style="font-size:0.82rem;">3x UTMB, roi de l'ultra-trail</p>
+        </div>
+      </a>
+      <a href="/articles/francois-dhaene-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
+        <div style="width:100%;height:140px;overflow:hidden;">
+          <img src="/images/athletes/francois-dhaene.webp" alt="Francois D'Haene" title="Francois D'Haene" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        </div>
+        <div style="padding:16px;">
+          <h3 style="font-size:0.95rem;">Francois D'Haene</h3>
+          <p style="font-size:0.82rem;">4x UTMB, vigneron champion</p>
+        </div>
+      </a>
+      <a href="/articles/courtney-dauwalter-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
+        <div style="width:100%;height:140px;overflow:hidden;">
+          <img src="/images/athletes/courtney-dauwalter.webp" alt="Courtney Dauwalter" title="Courtney Dauwalter" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+        </div>
+        <div style="padding:16px;">
+          <h3 style="font-size:0.95rem;">Courtney Dauwalter</h3>
+          <p style="font-size:0.82rem;">2x UTMB, reine de l'ultra</p>
+        </div>
+      </a>
+      <a href="/articles/jim-walmsley-portrait" class="feature-card fade-in" style="text-decoration:none;color:inherit;text-align:center;overflow:hidden;padding:0;">
+        <div style="width:100%;height:140px;background:linear-gradient(135deg,var(--bg-darkest),var(--bg-dark));display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:1.2rem;color:var(--primary);">JW</span>
+        </div>
+        <div style="padding:16px;">
+          <h3 style="font-size:0.95rem;">Jim Walmsley</h3>
+          <p style="font-size:0.82rem;">3x Western States, recordman</p>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+      <a href="/athletes" class="btn btn-outline">Tous les portraits</a>
+    </div>
+  </div>
+</section>
+
+<!-- Thematiques -->
+<section class="section-alt">
   <div class="container">
     <h2 class="section-title">Explorez par thematique</h2>
     <p class="section-subtitle">Course sur route, trail, ultra-endurance ou triathlon - retrouvez nos guides adaptes a votre pratique.</p>
     <div class="features-grid" style="grid-template-columns:repeat(4,1fr);">
       <div class="feature-card fade-in" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">🛣️</div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">ROUTE</div>
         <h3 style="font-size:1rem;">Course sur route</h3>
         <p>10 km, semi, marathon</p>
       </div>
       <div class="feature-card fade-in" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">⛰️</div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">TRAIL</div>
         <h3 style="font-size:1rem;">Trail running</h3>
         <p>Sentiers et montagne</p>
       </div>
       <div class="feature-card fade-in" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">🏅</div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">ULTRA</div>
         <h3 style="font-size:1rem;">Ultra-endurance</h3>
         <p>Ultra-trail et 100 miles</p>
       </div>
       <div class="feature-card fade-in" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">🏊</div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--primary);margin-bottom:12px;">TRI</div>
         <h3 style="font-size:1rem;">Triathlon</h3>
         <p>Natation, velo, course</p>
       </div>
