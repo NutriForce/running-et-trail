@@ -3,207 +3,207 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
 ---
 
 <ArticleLayout
-  title="Eviter les blessures en course a pied : guide complet"
-  description="Comment eviter les blessures en course a pied ? Les 8 blessures courantes en running, leurs causes, la prevention par le renforcement et le retour progressif."
+  title="Éviter les blessures en course à pied : guide complet"
+  description="Comment éviter les blessures en course à pied ? Les 8 blessures courantes en running, leurs causes, la prévention par le renforcement et le retour progressif."
   canonical="/articles/eviter-blessures-course"
   date="2026-08-09"
   readTime="14 min"
-  category="Sante"
+  category="Santé"
   author="julien-moreau"
 >
-<Fragment slot="breadcrumb">Eviter les blessures en course</Fragment>
+<Fragment slot="breadcrumb">Éviter les blessures en course</Fragment>
 
-<p>Eviter les blessures en course a pied est la preoccupation numero 1 de tout coureur, du debutant au marathonien confirme. Les statistiques sont sans appel : <strong>50 a 70% des coureurs</strong> se blessent au moins une fois par an. La majorite de ces blessures courantes en running ne sont pas des accidents mais le resultat d'erreurs evitables dans la charge d'entrainement, la technique ou la preparation physique.</p>
+<p>Éviter les blessures en course à pied est la préoccupation numéro 1 de tout coureur, du débutant au marathonien confirmé. Les statistiques sont sans appel : <strong>50 à 70% des coureurs</strong> se blessent au moins une fois par an. La majorité de ces blessures courantes en running ne sont pas des accidents mais le résultat d'erreurs évitables dans la charge d'entraînement, la technique ou la préparation physique.</p>
 
-<p>Ce guide detaille les 8 pathologies les plus frequentes, leurs mecanismes, et surtout les strategies concretes pour les prevenir. L'objectif : courir longtemps, regulierement, et sans douleur.</p>
+<p>Ce guide détaille les 8 pathologies les plus fréquentes, leurs mécanismes, et surtout les stratégies concrètes pour les prévenir. L'objectif : courir longtemps, régulièrement, et sans douleur.</p>
 
-<h2>Les 8 blessures courantes en running : tableau recapitulatif</h2>
+<h2>Les 8 blessures courantes en running : tableau récapitulatif</h2>
 
-<p>Avant d'entrer dans le detail, voici une vue d'ensemble des blessures qui touchent le plus les coureurs. Chaque pathologie a ses propres mecanismes, mais elles partagent souvent les memes facteurs declenchants.</p>
+<p>Avant d'entrer dans le détail, voici une vue d'ensemble des blessures qui touchent le plus les coureurs. Chaque pathologie a ses propres mécanismes, mais elles partagent souvent les mêmes facteurs déclenchants.</p>
 
 <table>
   <thead>
     <tr>
       <th>Blessure</th>
-      <th>Symptomes principaux</th>
-      <th>Cause frequente</th>
-      <th>Delai de recuperation</th>
+      <th>Symptômes principaux</th>
+      <th>Cause fréquente</th>
+      <th>Délai de récupération</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Periostite tibiale</td>
-      <td>Douleur diffuse face interne du tibia, aggravee a la course</td>
+      <td>Périostite tibiale</td>
+      <td>Douleur diffuse face interne du tibia, aggravée à la course</td>
       <td>Augmentation brutale du volume, surface dure</td>
-      <td>3 a 6 semaines</td>
+      <td>3 à 6 semaines</td>
     </tr>
     <tr>
       <td>Fasciite plantaire</td>
       <td>Douleur sous le talon, intense le matin au lever</td>
-      <td>Surcharge, chaussures usees, mollets raides</td>
-      <td>6 semaines a 6 mois</td>
+      <td>Surcharge, chaussures usées, mollets raides</td>
+      <td>6 semaines à 6 mois</td>
     </tr>
     <tr>
       <td>Syndrome de la bandelette ilio-tibiale</td>
-      <td>Douleur face externe du genou, apparait apres 15-20 min de course</td>
-      <td>Faiblesse des fessiers, desequilibre lateral</td>
-      <td>4 a 8 semaines</td>
+      <td>Douleur face externe du genou, apparaît après 15-20 min de course</td>
+      <td>Faiblesse des fessiers, déséquilibre latéral</td>
+      <td>4 à 8 semaines</td>
     </tr>
     <tr>
       <td>Tendinopathie d'Achille</td>
-      <td>Douleur et raideur du tendon, pire au demarrage</td>
-      <td>Volume excessif, mollets faibles, drop eleve</td>
-      <td>6 a 12 semaines</td>
+      <td>Douleur et raideur du tendon, pire au démarrage</td>
+      <td>Volume excessif, mollets faibles, drop élevé</td>
+      <td>6 à 12 semaines</td>
     </tr>
     <tr>
-      <td>Syndrome femoro-patellaire</td>
-      <td>Douleur autour ou derriere la rotule, aggravee en descente et escaliers</td>
+      <td>Syndrome fémoro-patellaire</td>
+      <td>Douleur autour ou derrière la rotule, aggravée en descente et escaliers</td>
       <td>Faiblesse du quadriceps interne, mauvais alignement</td>
-      <td>4 a 8 semaines</td>
+      <td>4 à 8 semaines</td>
     </tr>
     <tr>
       <td>Fracture de fatigue</td>
-      <td>Douleur localisee, precise, qui s'aggrave a chaque seance</td>
-      <td>Volume trop eleve, deficit calorique, os fragilise</td>
-      <td>6 a 12 semaines (arret complet)</td>
+      <td>Douleur localisée, précise, qui s'aggrave à chaque séance</td>
+      <td>Volume trop élevé, déficit calorique, os fragilisé</td>
+      <td>6 à 12 semaines (arrêt complet)</td>
     </tr>
     <tr>
       <td>Douleur de hanche (tendinopathie du moyen fessier)</td>
-      <td>Douleur laterale de la hanche, irradiant vers la cuisse</td>
+      <td>Douleur latérale de la hanche, irradiant vers la cuisse</td>
       <td>Faiblesse du moyen fessier, cadence trop basse</td>
-      <td>4 a 10 semaines</td>
+      <td>4 à 10 semaines</td>
     </tr>
     <tr>
       <td>Pubalgie</td>
       <td>Douleur au niveau du pubis, irradiant vers les adducteurs</td>
-      <td>Desequilibre abdominaux/adducteurs, terrain instable</td>
-      <td>8 a 16 semaines</td>
+      <td>Déséquilibre abdominaux/adducteurs, terrain instable</td>
+      <td>8 à 16 semaines</td>
     </tr>
   </tbody>
 </table>
 
-<h2>Detail des 8 blessures du coureur</h2>
+<h2>Détail des 8 blessures du coureur</h2>
 
-<h3>Periostite tibiale (shin splints)</h3>
+<h3>Périostite tibiale (shin splints)</h3>
 
-<p>La periostite tibiale est une inflammation du perioste, la membrane qui entoure l'os du tibia. Elle se manifeste par une <strong>douleur diffuse le long de la face interne du tibia</strong>, generalement sur 5 a 15 cm. La douleur apparait en debut de course, peut s'attenuer a chaud, puis revient apres l'effort.</p>
+<p>La périostite tibiale est une inflammation du périoste, la membrane qui entoure l'os du tibia. Elle se manifeste par une <strong>douleur diffuse le long de la face interne du tibia</strong>, généralement sur 5 à 15 cm. La douleur apparaît en début de course, peut s'atténuer à chaud, puis revient après l'effort.</p>
 
-<p>Les causes principales : une augmentation trop rapide du kilometrage (plus de 10% par semaine), la course prolongee sur beton ou asphalte, et un pied pronateur non compense. Les coureurs debutants qui passent de 0 a 30 km par semaine en quelques semaines sont les plus touches.</p>
+<p>Les causes principales : une augmentation trop rapide du kilométrage (plus de 10% par semaine), la course prolongée sur béton ou asphalte, et un pied pronateur non compensé. Les coureurs débutants qui passent de 0 à 30 km par semaine en quelques semaines sont les plus touchés.</p>
 
 <h3>Fasciite plantaire</h3>
 
-<p>L'aponevrose plantaire est une bande fibreuse qui relie le talon aux orteils. Quand elle est surchargee, elle s'enflamme et provoque une <strong>douleur vive sous le talon</strong>, particulierement intense les premiers pas du matin. La douleur diminue apres quelques minutes de marche puis revient apres un effort prolonge.</p>
+<p>L'aponévrose plantaire est une bande fibreuse qui relie le talon aux orteils. Quand elle est surchargée, elle s'enflamme et provoque une <strong>douleur vive sous le talon</strong>, particulièrement intense les premiers pas du matin. La douleur diminue après quelques minutes de marche puis revient après un effort prolongé.</p>
 
-<p>Les facteurs de risque : des mollets tendus et raccourcis, des chaussures avec un amorti use, un volume d'entrainement excessif, et un IMC eleve. Les coureurs de plus de 40 ans sont statistiquement plus concernes.</p>
+<p>Les facteurs de risque : des mollets tendus et raccourcis, des chaussures avec un amorti usé, un volume d'entraînement excessif, et un IMC élevé. Les coureurs de plus de 40 ans sont statistiquement plus concernés.</p>
 
 <h3>Syndrome de la bandelette ilio-tibiale (syndrome de l'essuie-glace)</h3>
 
-<p>La bandelette IT est un tendon plat qui longe la face externe de la cuisse, du bassin au genou. Quand elle frotte de maniere repetee sur le condyle femoral, une inflammation apparait. Le symptome typique : <strong>aucune douleur au repos ni au demarrage</strong>, puis une douleur vive a la face externe du genou qui apparait toujours au meme kilometrage (souvent 3 a 5 km).</p>
+<p>La bandelette IT est un tendon plat qui longe la face externe de la cuisse, du bassin au genou. Quand elle frotte de manière répétée sur le condyle fémoral, une inflammation apparaît. Le symptôme typique : <strong>aucune douleur au repos ni au démarrage</strong>, puis une douleur vive à la face externe du genou qui apparaît toujours au même kilométrage (souvent 3 à 5 km).</p>
 
-<p>La cause principale est une faiblesse des muscles stabilisateurs de la hanche, notamment le moyen fessier. Ce deficit oblige la bandelette IT a compenser pour stabiliser le bassin a chaque foulee.</p>
+<p>La cause principale est une faiblesse des muscles stabilisateurs de la hanche, notamment le moyen fessier. Ce déficit oblige la bandelette IT à compenser pour stabiliser le bassin à chaque foulée.</p>
 
 <h3>Tendinopathie d'Achille</h3>
 
-<p>Le tendon d'Achille est le tendon le plus puissant du corps. Il subit des forces equivalant a <strong>6 a 8 fois le poids du corps</strong> a chaque foulee. Quand la charge depasse sa capacite d'adaptation, le tendon se degrade progressivement. La douleur se situe soit au milieu du tendon (tendinopathie corporeale), soit a son insertion sur le calcaneum.</p>
+<p>Le tendon d'Achille est le tendon le plus puissant du corps. Il subit des forces équivalant à <strong>6 à 8 fois le poids du corps</strong> à chaque foulée. Quand la charge dépasse sa capacité d'adaptation, le tendon se dégrade progressivement. La douleur se situe soit au milieu du tendon (tendinopathie corporéale), soit à son insertion sur le calcanéum.</p>
 
-<p>Les principaux declencheurs : un passage trop rapide a des chaussures minimalistes (drop faible), une augmentation soudaine des seances de fractionne ou de cotes, et des mollets insuffisamment forts par rapport au volume d'entrainement.</p>
+<p>Les principaux déclencheurs : un passage trop rapide à des chaussures minimalistes (drop faible), une augmentation soudaine des séances de fractionné ou de côtes, et des mollets insuffisamment forts par rapport au volume d'entraînement.</p>
 
-<h3>Syndrome femoro-patellaire (genou du coureur)</h3>
+<h3>Syndrome fémoro-patellaire (genou du coureur)</h3>
 
-<p>Ce syndrome designe une douleur diffuse autour ou derriere la rotule, causee par un mauvais glissement de la rotule dans la trochlee femorale. La douleur s'aggrave en descente, dans les escaliers, et apres une position assise prolongee (signe du cinema).</p>
+<p>Ce syndrome désigne une douleur diffuse autour ou derrière la rotule, causée par un mauvais glissement de la rotule dans la trochlée fémorale. La douleur s'aggrave en descente, dans les escaliers, et après une position assise prolongée (signe du cinéma).</p>
 
-<p>Les causes : un desequilibre entre le vaste interne et le vaste externe du quadriceps, une faiblesse des fessiers qui entraine une rotation interne du genou, et un exces de descente en trail sans preparation adequate.</p>
+<p>Les causes : un déséquilibre entre le vaste interne et le vaste externe du quadriceps, une faiblesse des fessiers qui entraîne une rotation interne du genou, et un excès de descente en trail sans préparation adéquate.</p>
 
 <h3>Fracture de fatigue</h3>
 
-<p>C'est la blessure la plus serieuse de cette liste. La fracture de fatigue est une <strong>microfissure osseuse</strong> causee par des contraintes repetees depassant la capacite de remodelage de l'os. Les localisations les plus frequentes en course : metatarses, tibia, col du femur. La douleur est precise, localisee, et s'aggrave systematiquement a chaque seance.</p>
+<p>C'est la blessure la plus sérieuse de cette liste. La fracture de fatigue est une <strong>microfissure osseuse</strong> causée par des contraintes répétées dépassant la capacité de remodelage de l'os. Les localisations les plus fréquentes en course : métatarses, tibia, col du fémur. La douleur est précise, localisée, et s'aggrave systématiquement à chaque séance.</p>
 
-<p>Les facteurs de risque : volume d'entrainement excessif sans repos suffisant, deficit calorique prolonge (le RED-S chez les coureurs), carence en vitamine D ou calcium, et sexe feminin (le risque est 2 a 4 fois superieur chez les coureuses, surtout en cas de troubles du cycle).</p>
+<p>Les facteurs de risque : volume d'entraînement excessif sans repos suffisant, déficit calorique prolongé (le RED-S chez les coureurs), carence en vitamine D ou calcium, et sexe féminin (le risque est 2 à 4 fois supérieur chez les coureuses, surtout en cas de troubles du cycle).</p>
 
 <h3>Douleur de hanche (tendinopathie du moyen fessier)</h3>
 
-<p>Le moyen fessier est le principal stabilisateur lateral du bassin. Quand il est faible, il subit une tendinopathie a son insertion sur le grand trochanter. La douleur est situee <strong>sur le cote de la hanche</strong>, parfois confondue avec une sciatique. Elle est aggravee par la course, la position debout prolongee, et le fait de dormir sur le cote concerne.</p>
+<p>Le moyen fessier est le principal stabilisateur latéral du bassin. Quand il est faible, il subit une tendinopathie à son insertion sur le grand trochanter. La douleur est située <strong>sur le côté de la hanche</strong>, parfois confondue avec une sciatique. Elle est aggravée par la course, la position debout prolongée, et le fait de dormir sur le côté concerné.</p>
 
-<p>Les coureurs avec une cadence basse (moins de 160 pas par minute) et un exces d'oscillation laterale du bassin sont les plus a risque.</p>
+<p>Les coureurs avec une cadence basse (moins de 160 pas par minute) et un excès d'oscillation latérale du bassin sont les plus à risque.</p>
 
 <h3>Pubalgie</h3>
 
-<p>La pubalgie est une douleur au niveau de la symphyse pubienne, irradiant vers les adducteurs et parfois les abdominaux inferieurs. Elle resulte d'un <strong>desequilibre entre les muscles abdominaux et les adducteurs</strong>, creant des forces de cisaillement sur le pubis.</p>
+<p>La pubalgie est une douleur au niveau de la symphyse pubienne, irradiant vers les adducteurs et parfois les abdominaux inférieurs. Elle résulte d'un <strong>déséquilibre entre les muscles abdominaux et les adducteurs</strong>, créant des forces de cisaillement sur le pubis.</p>
 
-<p>Les courses sur terrain instable (sable, chemin deverse), les changements de direction brutaux, et un manque de gainage profond sont les declencheurs principaux. La pubalgie est longue a guerir et necessite souvent un arret complet de la course pendant plusieurs semaines.</p>
+<p>Les courses sur terrain instable (sable, chemin déversé), les changements de direction brutaux, et un manque de gainage profond sont les déclencheurs principaux. La pubalgie est longue à guérir et nécessite souvent un arrêt complet de la course pendant plusieurs semaines.</p>
 
 <h2>Pourquoi les coureurs se blessent : les 5 causes principales</h2>
 
-<p>Les blessures en course a pied ne surviennent pas par hasard. Cinq facteurs expliquent l'immense majorite des pathologies.</p>
+<p>Les blessures en course à pied ne surviennent pas par hasard. Cinq facteurs expliquent l'immense majorité des pathologies.</p>
 
 <h3>1. Augmentation trop rapide du volume</h3>
 
-<p>C'est la cause numero 1, responsable de <strong>60 a 70% des blessures</strong>. Le systeme musculo-squelettique a besoin de temps pour s'adapter a une charge nouvelle. Les muscles s'adaptent en 2 a 4 semaines, les tendons en 4 a 8 semaines, les os en 8 a 12 semaines. Quand le volume augmente plus vite que cette adaptation, la blessure est quasi inevitable.</p>
+<p>C'est la cause numéro 1, responsable de <strong>60 à 70% des blessures</strong>. Le système musculo-squelettique a besoin de temps pour s'adapter à une charge nouvelle. Les muscles s'adaptent en 2 à 4 semaines, les tendons en 4 à 8 semaines, les os en 8 à 12 semaines. Quand le volume augmente plus vite que cette adaptation, la blessure est quasi inévitable.</p>
 
-<h3>2. Chaussures inadaptees ou usees</h3>
+<h3>2. Chaussures inadaptées ou usées</h3>
 
-<p>Une chaussure de course perd ses proprietes d'amorti apres <strong>600 a 800 km</strong> (400-500 km pour les modeles legers). Courir avec des chaussures usees augmente le stress sur les articulations et les tendons. A l'inverse, une chaussure trop amortie ou avec un drop inadapte a votre biomecanique peut modifier votre foulee et creer de nouvelles contraintes.</p>
+<p>Une chaussure de course perd ses propriétés d'amorti après <strong>600 à 800 km</strong> (400-500 km pour les modèles légers). Courir avec des chaussures usées augmente le stress sur les articulations et les tendons. À l'inverse, une chaussure trop amortie ou avec un drop inadapté à votre biomécanique peut modifier votre foulée et créer de nouvelles contraintes.</p>
 
-<h3>3. Technique de course deficiente</h3>
+<h3>3. Technique de course déficiente</h3>
 
-<p>Une foulee avec attaque talon prononcee, une cadence trop basse (moins de 160 pas par minute), ou une oscillation verticale excessive augmentent les forces d'impact. Chaque foulee genere un impact de 2 a 3 fois le poids du corps : une mauvaise technique multiplie ces contraintes sur les memes structures.</p>
+<p>Une foulée avec attaque talon prononcée, une cadence trop basse (moins de 160 pas par minute), ou une oscillation verticale excessive augmentent les forces d'impact. Chaque foulée génère un impact de 2 à 3 fois le poids du corps : une mauvaise technique multiplie ces contraintes sur les mêmes structures.</p>
 
-<h3>4. Terrain inadapte</h3>
+<h3>4. Terrain inadapté</h3>
 
-<p>Le beton et l'asphalte sont les surfaces les plus traumatisantes pour les articulations. A l'oppose, la terre et l'herbe absorbent davantage les chocs. Cependant, un terrain trop irregulier (racines, pierres) augmente le risque d'entorse. L'ideal est de <strong>varier les surfaces</strong> pour repartir les contraintes.</p>
+<p>Le béton et l'asphalte sont les surfaces les plus traumatisantes pour les articulations. À l'opposé, la terre et l'herbe absorbent davantage les chocs. Cependant, un terrain trop irrégulier (racines, pierres) augmente le risque d'entorse. L'idéal est de <strong>varier les surfaces</strong> pour répartir les contraintes.</p>
 
 <h3>5. Faiblesse musculaire</h3>
 
-<p>La course a pied est un mouvement repetitif qui sollicite toujours les memes groupes musculaires dans le meme schema. Sans renforcement specifique, des desequilibres apparaissent : fessiers faibles, mollets insuffisants, gainage deficient. Ces faiblesses reportent les contraintes sur les tendons et les articulations au lieu de les absorber par les muscles.</p>
+<p>La course à pied est un mouvement répétitif qui sollicite toujours les mêmes groupes musculaires dans le même schéma. Sans renforcement spécifique, des déséquilibres apparaissent : fessiers faibles, mollets insuffisants, gainage déficient. Ces faiblesses reportent les contraintes sur les tendons et les articulations au lieu de les absorber par les muscles.</p>
 
-<h2>Strategies de prevention pour eviter les blessures en course a pied</h2>
+<h2>Stratégies de prévention pour éviter les blessures en course à pied</h2>
 
-<h3>La regle des 10%</h3>
+<h3>La règle des 10%</h3>
 
-<p>N'augmentez jamais votre volume hebdomadaire de plus de 10% d'une semaine sur l'autre. Cette regle simple est le premier rempart contre les blessures de surcharge. Concretement, si vous courez 30 km cette semaine, ne depassez pas 33 km la semaine suivante. Prevoyez aussi une <strong>semaine de decharge tous les 3 a 4 cycles</strong> (reduction de 30-40% du volume).</p>
+<p>N'augmentez jamais votre volume hebdomadaire de plus de 10% d'une semaine sur l'autre. Cette règle simple est le premier rempart contre les blessures de surcharge. Concrètement, si vous courez 30 km cette semaine, ne dépassez pas 33 km la semaine suivante. Prévoyez aussi une <strong>semaine de décharge tous les 3 à 4 cycles</strong> (réduction de 30-40% du volume).</p>
 
-<h3>Etirements et mobilite</h3>
+<h3>Étirements et mobilité</h3>
 
-<p>Les etirements statiques ne previennent pas les blessures quand ils sont realises avant l'effort. En revanche, un programme regulier de mobilite et d'etirements post-course contribue a maintenir des amplitudes articulaires saines. Les zones prioritaires pour le coureur :</p>
+<p>Les étirements statiques ne préviennent pas les blessures quand ils sont réalisés avant l'effort. En revanche, un programme régulier de mobilité et d'étirements post-course contribue à maintenir des amplitudes articulaires saines. Les zones prioritaires pour le coureur :</p>
 
 <ul>
-  <li><strong>Mollets et souleaires</strong> : 3 x 30 secondes par jambe, genou tendu puis genou flechi</li>
-  <li><strong>Ischio-jambiers</strong> : etirement progressif, jamais au-dela de la sensation de tension</li>
-  <li><strong>Flechisseurs de hanche (psoas)</strong> : position de fente, bassin en retroversion</li>
-  <li><strong>Quadriceps</strong> : etirement debout ou en position du chevalier</li>
-  <li><strong>Bandelette IT et fascia lateral</strong> : rouleau de massage (foam roller), 1 a 2 minutes par cote</li>
+  <li><strong>Mollets et soléaires</strong> : 3 x 30 secondes par jambe, genou tendu puis genou fléchi</li>
+  <li><strong>Ischio-jambiers</strong> : étirement progressif, jamais au-delà de la sensation de tension</li>
+  <li><strong>Fléchisseurs de hanche (psoas)</strong> : position de fente, bassin en rétroversion</li>
+  <li><strong>Quadriceps</strong> : étirement debout ou en position du chevalier</li>
+  <li><strong>Bandelette IT et fascia latéral</strong> : rouleau de massage (foam roller), 1 à 2 minutes par côté</li>
 </ul>
 
-<h3>Chaussures adaptees</h3>
+<h3>Chaussures adaptées</h3>
 
-<p>Faites analyser votre foulee en magasin specialise. Notez le kilometrage de chaque paire et remplacez-la entre 600 et 800 km. Si vous courez plus de 40 km par semaine, alternez deux paires pour laisser la mousse recuperer entre les seances (le rebond se regenere en 24 a 48 heures).</p>
+<p>Faites analyser votre foulée en magasin spécialisé. Notez le kilométrage de chaque paire et remplacez-la entre 600 et 800 km. Si vous courez plus de 40 km par semaine, alternez deux paires pour laisser la mousse récupérer entre les séances (le rebond se régénère en 24 à 48 heures).</p>
 
 <h3>Varier les surfaces et les allures</h3>
 
-<p>Repartissez vos seances entre route, chemins, piste et herbe. Variez aussi les types d'effort : 80% en endurance fondamentale (zone 2), 20% en fractionne ou allure specifique. Cette repartition reduit le stress mecanique tout en stimulant les adaptations physiologiques.</p>
+<p>Répartissez vos séances entre route, chemins, piste et herbe. Variez aussi les types d'effort : 80% en endurance fondamentale (zone 2), 20% en fractionné ou allure spécifique. Cette répartition réduit le stress mécanique tout en stimulant les adaptations physiologiques.</p>
 
 <h2>Programme de renforcement musculaire pour coureurs</h2>
 
-<p>Le renforcement musculaire est le pilier le plus sous-estime de la prevention des blessures en course a pied. Deux a trois seances de 20 minutes par semaine reduisent le risque de blessure de <strong>50% selon les etudes</strong>. Voici un programme complet ciblant les zones les plus vulnerables du coureur.</p>
+<p>Le renforcement musculaire est le pilier le plus sous-estimé de la prévention des blessures en course à pied. Deux à trois séances de 20 minutes par semaine réduisent le risque de blessure de <strong>50% selon les études</strong>. Voici un programme complet ciblant les zones les plus vulnérables du coureur.</p>
 
 <table>
   <thead>
     <tr>
       <th>Exercice</th>
-      <th>Zone ciblee</th>
-      <th>Series x Repetitions</th>
-      <th>Frequence</th>
+      <th>Zone ciblée</th>
+      <th>Séries x Répétitions</th>
+      <th>Fréquence</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Squat unilateral (pistol assiste)</td>
+      <td>Squat unilatéral (pistol assisté)</td>
       <td>Quadriceps, fessiers</td>
       <td>3 x 8 par jambe</td>
       <td>2-3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Pont fessier unilateral</td>
+      <td>Pont fessier unilatéral</td>
       <td>Grand fessier, ischio-jambiers</td>
       <td>3 x 12 par jambe</td>
       <td>2-3 fois/semaine</td>
@@ -211,24 +211,24 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
     <tr>
       <td>Clamshell (coquillage)</td>
       <td>Moyen fessier</td>
-      <td>3 x 15 par cote</td>
+      <td>3 x 15 par côté</td>
       <td>3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Elevation laterale de hanche (side-lying hip abduction)</td>
+      <td>Élévation latérale de hanche (side-lying hip abduction)</td>
       <td>Moyen fessier, tenseur du fascia lata</td>
-      <td>3 x 12 par cote</td>
+      <td>3 x 12 par côté</td>
       <td>2-3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Montee sur pointes unilaterale (calf raise)</td>
-      <td>Mollets (gastrocnemien + soleaire)</td>
+      <td>Montée sur pointes unilatérale (calf raise)</td>
+      <td>Mollets (gastrocnémien + soléaire)</td>
       <td>3 x 15 par jambe</td>
       <td>3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Montee sur pointes genou flechi</td>
-      <td>Soleaire (protection du tendon d'Achille)</td>
+      <td>Montée sur pointes genou fléchi</td>
+      <td>Soléaire (protection du tendon d'Achille)</td>
       <td>3 x 12 par jambe</td>
       <td>3 fois/semaine</td>
     </tr>
@@ -239,106 +239,106 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
       <td>3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Planche laterale</td>
-      <td>Obliques, carre des lombes, hanche</td>
-      <td>3 x 20-30 secondes par cote</td>
+      <td>Planche latérale</td>
+      <td>Obliques, carré des lombes, hanche</td>
+      <td>3 x 20-30 secondes par côté</td>
       <td>3 fois/semaine</td>
     </tr>
     <tr>
-      <td>Fente avant marchee</td>
-      <td>Quadriceps, fessiers, equilibre</td>
+      <td>Fente avant marchée</td>
+      <td>Quadriceps, fessiers, équilibre</td>
       <td>3 x 10 par jambe</td>
       <td>2 fois/semaine</td>
     </tr>
     <tr>
       <td>Dead bug</td>
       <td>Stabilisation lombo-pelvienne</td>
-      <td>3 x 10 par cote</td>
+      <td>3 x 10 par côté</td>
       <td>2-3 fois/semaine</td>
     </tr>
   </tbody>
 </table>
 
 <blockquote>
-  <strong>Conseil pratique :</strong> realisez ces exercices les jours de repos ou apres une seance facile, jamais avant un fractionne ou une sortie longue. Commencez par 2 series si vous debutez le renforcement, puis passez a 3 apres 2 semaines. Augmentez la charge (lest, elastique) quand l'exercice devient facile sur les 3 dernieres repetitions.
+  <strong>Conseil pratique :</strong> réalisez ces exercices les jours de repos ou après une séance facile, jamais avant un fractionné ou une sortie longue. Commencez par 2 séries si vous débutez le renforcement, puis passez à 3 après 2 semaines. Augmentez la charge (lest, élastique) quand l'exercice devient facile sur les 3 dernières répétitions.
 </blockquote>
 
-<h2>Signes d'alerte : quand consulter et quand gerer soi-meme</h2>
+<h2>Signes d'alerte : quand consulter et quand gérer soi-même</h2>
 
-<p>Toutes les douleurs ne necessitent pas un arret immediat. Savoir faire la difference entre une douleur mecanique benigne et un signal d'alarme est essentiel pour eviter les blessures en course a pied sans tomber dans l'exces de prudence.</p>
+<p>Toutes les douleurs ne nécessitent pas un arrêt immédiat. Savoir faire la différence entre une douleur mécanique bénigne et un signal d'alarme est essentiel pour éviter les blessures en course à pied sans tomber dans l'excès de prudence.</p>
 
-<h3>Gerez vous-meme si</h3>
+<h3>Gérez vous-même si</h3>
 
 <ul>
-  <li>La douleur apparait en debut de course et <strong>disparait completement apres 10 minutes</strong> d'echauffement</li>
-  <li>La douleur reste inferieure a <strong>3 sur 10</strong> sur une echelle de douleur pendant la course</li>
-  <li>Il n'y a <strong>aucune douleur le lendemain</strong> au reveil</li>
-  <li>La zone n'est ni gonflee ni rouge</li>
-  <li>La douleur est symetrique (courbatures des deux cotes)</li>
+  <li>La douleur apparaît en début de course et <strong>disparaît complètement après 10 minutes</strong> d'échauffement</li>
+  <li>La douleur reste inférieure à <strong>3 sur 10</strong> sur une échelle de douleur pendant la course</li>
+  <li>Il n'y a <strong>aucune douleur le lendemain</strong> au réveil</li>
+  <li>La zone n'est ni gonflée ni rouge</li>
+  <li>La douleur est symétrique (courbatures des deux côtés)</li>
 </ul>
 
-<p>Dans ces cas, reduisez le volume de 20-30%, evitez les seances intenses, et renforcez la zone concernee. Si la situation ne s'ameliore pas en 7 a 10 jours, consultez.</p>
+<p>Dans ces cas, réduisez le volume de 20-30%, évitez les séances intenses, et renforcez la zone concernée. Si la situation ne s'améliore pas en 7 à 10 jours, consultez.</p>
 
 <h3>Consultez rapidement si</h3>
 
 <ul>
-  <li>La douleur <strong>s'aggrave pendant la course</strong> et vous oblige a modifier votre foulee</li>
-  <li>La douleur est superieure a <strong>4 sur 10</strong> et ne diminue pas a l'echauffement</li>
+  <li>La douleur <strong>s'aggrave pendant la course</strong> et vous oblige à modifier votre foulée</li>
+  <li>La douleur est supérieure à <strong>4 sur 10</strong> et ne diminue pas à l'échauffement</li>
   <li>Vous avez mal <strong>au repos ou la nuit</strong></li>
-  <li>La zone est <strong>gonflee, chaude ou rouge</strong></li>
-  <li>La douleur est <strong>tres localisee</strong> sur un point precis de l'os (suspicion de fracture de fatigue)</li>
+  <li>La zone est <strong>gonflée, chaude ou rouge</strong></li>
+  <li>La douleur est <strong>très localisée</strong> sur un point précis de l'os (suspicion de fracture de fatigue)</li>
   <li>Vous boitez en marchant</li>
-  <li>La douleur persiste depuis plus de <strong>2 semaines</strong> malgre la reduction du volume</li>
+  <li>La douleur persiste depuis plus de <strong>2 semaines</strong> malgré la réduction du volume</li>
 </ul>
 
-<p>Les professionnels a consulter en priorite : medecin du sport, kinesitherapeute specialise en course a pied, podologue du sport (pour une analyse biomecanique et eventuelle orthese).</p>
+<p>Les professionnels à consulter en priorité : médecin du sport, kinésithérapeute spécialisé en course à pied, podologue du sport (pour une analyse biomécanique et éventuelle orthèse).</p>
 
-<h2>Protocole de retour a la course apres blessure</h2>
+<h2>Protocole de retour à la course après blessure</h2>
 
-<p>Le retour a la course est une phase critique. Reprendre trop vite est la premiere cause de rechute. Reprendre trop lentement retarde inutilement le retour a la performance. Voici une methode progressive et securisee.</p>
+<p>Le retour à la course est une phase critique. Reprendre trop vite est la première cause de rechute. Reprendre trop lentement retarde inutilement le retour à la performance. Voici une méthode progressive et sécurisée.</p>
 
-<h3>Criteres avant de reprendre</h3>
+<h3>Critères avant de reprendre</h3>
 
 <ul>
-  <li>Aucune douleur a la marche rapide pendant 30 minutes</li>
+  <li>Aucune douleur à la marche rapide pendant 30 minutes</li>
   <li>Aucune douleur au lever le matin</li>
-  <li>Capacite a faire 20 montees sur pointes unilaterales sans douleur (pour les blessures du membre inferieur)</li>
-  <li>Feu vert du professionnel de sante si la blessure etait serieuse</li>
+  <li>Capacité à faire 20 montées sur pointes unilatérales sans douleur (pour les blessures du membre inférieur)</li>
+  <li>Feu vert du professionnel de santé si la blessure était sérieuse</li>
 </ul>
 
-<h3>La methode marche-course (walk-run)</h3>
+<h3>La méthode marche-course (walk-run)</h3>
 
-<p>Le protocole walk-run permet de reintroduire l'impact progressivement. Il se deroule sur <strong>4 a 6 semaines</strong> :</p>
+<p>Le protocole walk-run permet de réintroduire l'impact progressivement. Il se déroule sur <strong>4 à 6 semaines</strong> :</p>
 
 <ol>
-  <li><strong>Semaine 1 :</strong> 3 sorties de 20 min : alterner 1 min de course / 2 min de marche. Si aucune douleur le lendemain, passer a l'etape suivante</li>
+  <li><strong>Semaine 1 :</strong> 3 sorties de 20 min : alterner 1 min de course / 2 min de marche. Si aucune douleur le lendemain, passer à l'étape suivante</li>
   <li><strong>Semaine 2 :</strong> 3 sorties de 25 min : alterner 2 min de course / 1 min de marche</li>
   <li><strong>Semaine 3 :</strong> 3 sorties de 25-30 min : alterner 4 min de course / 1 min de marche</li>
   <li><strong>Semaine 4 :</strong> 3 sorties de 30 min : alterner 8 min de course / 1 min de marche</li>
-  <li><strong>Semaine 5 :</strong> 3 sorties de 25-30 min en course continue a allure facile</li>
-  <li><strong>Semaine 6 :</strong> reprise du plan d'entrainement habituel avec volume reduit de 50%, puis progression de 10% par semaine</li>
+  <li><strong>Semaine 5 :</strong> 3 sorties de 25-30 min en course continue à allure facile</li>
+  <li><strong>Semaine 6 :</strong> reprise du plan d'entraînement habituel avec volume réduit de 50%, puis progression de 10% par semaine</li>
 </ol>
 
-<h3>Regles de securite pendant la reprise</h3>
+<h3>Règles de sécurité pendant la reprise</h3>
 
 <ul>
-  <li><strong>Zero douleur pendant la course</strong> : si la douleur revient, revenez a l'etape precedente</li>
-  <li><strong>Pas de fractionne</strong> pendant les 4 premieres semaines de reprise</li>
-  <li><strong>Maintenir le renforcement</strong> : continuez les exercices de prevention pendant toute la phase de reprise</li>
-  <li><strong>Surface souple</strong> : privilegiez les chemins et l'herbe pour les premieres sorties</li>
-  <li><strong>Evaluer le lendemain matin</strong> : le vrai indicateur est la douleur au reveil, pas pendant la course</li>
+  <li><strong>Zéro douleur pendant la course</strong> : si la douleur revient, revenez à l'étape précédente</li>
+  <li><strong>Pas de fractionné</strong> pendant les 4 premières semaines de reprise</li>
+  <li><strong>Maintenir le renforcement</strong> : continuez les exercices de prévention pendant toute la phase de reprise</li>
+  <li><strong>Surface souple</strong> : privilégiez les chemins et l'herbe pour les premières sorties</li>
+  <li><strong>Évaluer le lendemain matin</strong> : le vrai indicateur est la douleur au réveil, pas pendant la course</li>
 </ul>
 
 <blockquote>
-  <strong>A retenir :</strong> la prevention des blessures en running repose sur trois piliers egalement importants : la gestion intelligente de la charge d'entrainement (regle des 10%), le renforcement musculaire regulier (2 a 3 seances par semaine), et l'ecoute de son corps (reagir des les premiers signaux). Un coureur qui integre ces trois elements dans sa routine peut courir pendant des decennies sans blessure grave.
+  <strong>À retenir :</strong> la prévention des blessures en running repose sur trois piliers également importants : la gestion intelligente de la charge d'entraînement (règle des 10%), le renforcement musculaire régulier (2 à 3 séances par semaine), et l'écoute de son corps (réagir dès les premiers signaux). Un coureur qui intègre ces trois éléments dans sa routine peut courir pendant des décennies sans blessure grave.
 </blockquote>
 
 <div class="article-cta">
-  <h3>Soutenez votre recuperation</h3>
-  <p>Complements et nutrition testes pour les coureurs.</p>
+  <h3>Soutenez votre récupération</h3>
+  <p>Compléments et nutrition testés pour les coureurs.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-    <a href="/comparatifs/complements-endurance" class="btn btn-primary btn-sm">Complements endurance</a>
-    <a href="/comparatifs/electrolytes" class="btn btn-outline btn-sm">Electrolytes</a>
+    <a href="/comparatifs/complements-endurance" class="btn btn-primary btn-sm">Compléments endurance</a>
+    <a href="/comparatifs/electrolytes" class="btn btn-outline btn-sm">Électrolytes</a>
   </div>
 </div>
 
